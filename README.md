@@ -1,6 +1,8 @@
-## SRG0Z10: Mainnet participation
+## SRG0Z10
+[TELEGRAM](https://t.me/srg_z12) | [DISCORD](https://discord.com/users/SRG_TS#3469) | [EMAIL](mailto:sergpsy00@gmail.com) | [TWITTER](https://twitter.com/Z10Serg) | [WEBSITE](http://srgts.space/)
+## Mainnet participation
 * [FIRMACHAIN](https://firmachain.org/) - [EXPLORER](https://explorer.firmachain.dev/validators/firmavaloper15ynjhls568twd6treerrlqethcyuhnnek2jggd)
-## SRG0Z10: Testnet participation
+## Testnet participation
 ### 2022
 * [NEUTRON](https://neutron.org/) - [MANUAL](https://github.com/defrisk0/testnet_part/tree/main/NEUTRON) | [EXPLORER](https://)
 * [UPTICK](https://www.uptick.network/) - [MANUAL](https://github.com/defrisk0/testnet_part/tree/main/UPTICK) | [EXPLORER](https://)
