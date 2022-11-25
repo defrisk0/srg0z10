@@ -1,5 +1,5 @@
 # NEUTRON
-Explorer:
+[RPC](http://neutron.srgts.xyz:43657) | [API](http://neutron.srgts.xyz:4517) | [gRPC](http://neutron.srgts.xyz:8390) | [EXPLORER](http://)
 
 Let's update and install the necessary packages:
 ````
@@ -93,9 +93,7 @@ Checking the logs
 ````
 sudo journalctl -u neutrond -f -o cat
 ````
-[RPC](http://neutron.srgts.xyz:43657) | [API](http://neutron.srgts.xyz:4517) | [gRPC](http://neutron.srgts.xyz:8390)
-
-STATE SYNC:
+State Sync:
 ````
 sudo systemctl stop neutrond
 neutrond tendermint unsafe-reset-all --home $HOME/.neutrond --keep-addr-book
