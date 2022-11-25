@@ -1,5 +1,5 @@
 # UPTICK
-Explorer:
+[RPC](http://uptick.srgts.xyz:26657) | [API](http://uptick.srgts.xyz:1317) | [gRPC](http://uptick.srgts.xyz:9090) | [EXPLORER](http://)
 
 Let's update and install the necessary packages:
 ````
@@ -91,8 +91,6 @@ Checking the logs
 ````
 sudo journalctl -u uptickd -f -o cat
 ````
-[RPC](http://uptick.srgts.xyz:26657) | [API](http://uptick.srgts.xyz:1317) | [gRPC](http://uptick.srgts.xyz:9090)
-
-STATE SYNC:
+State Sync:
 ````
 ````
