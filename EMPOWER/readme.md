@@ -1,5 +1,5 @@
 # EMPOWER
-Explorer:
+[RPC](http://empower.srgts.xyz:26657) | [API](http://empower.srgts.xyz:1317) | [gRPC](http://empower.srgts.xyz:9090) | [EXPLORER](http://)
 
 Let's update and install the necessary packages:
 ````
@@ -90,9 +90,7 @@ Checking the logs
 ````
 sudo journalctl -u empowerd -f -o cat
 ````
-[RPC](http://empower.srgts.xyz:26657) | [API](http://empower.srgts.xyz:1317) | [gRPC](http://empower.srgts.xyz:9090)
-
-STATE SYNC:
+State Sync:
 ````
 sudo systemctl stop empowerd
 empowerd tendermint unsafe-reset-all --home $HOME/.empowerchain --keep-addr-book
