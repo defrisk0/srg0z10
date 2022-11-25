@@ -91,11 +91,7 @@ Checking the logs
 ````
 sudo journalctl -u uptickd -f -o cat
 ````
-RPC:    http://uptick.srgts.xyz:26657
-
-API:    http://uptick.srgts.xyz:1317
-
-gRPC:   http://uptick.srgts.xyz:9090
+[RPC](http://uptick.srgts.xyz:26657) | [API](http://uptick.srgts.xyz:1317) | [gRPC](http://uptick.srgts.xyz:9090)
 
 STATE SYNC:
 ````
