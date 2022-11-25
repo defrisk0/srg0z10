@@ -93,11 +93,7 @@ Checking the logs
 ````
 sudo journalctl -u neutrond -f -o cat
 ````
-RPC:  http://neutron.srgts.xyz:43657
-
-API:  http://neutron.srgts.xyz:4517
-
-gRPC: http://neutron.srgts.xyz:8390
+[RPC](http://neutron.srgts.xyz:43657) | [API](http://neutron.srgts.xyz:4517) | [gRPC](http://neutron.srgts.xyz:8390)
 
 STATE SYNC:
 ````
