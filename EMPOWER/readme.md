@@ -1,5 +1,5 @@
 # EMPOWER
-[RPC](http://empower.srgts.xyz:26657) | [API](http://empower.srgts.xyz:1317) | [gRPC](http://empower.srgts.xyz:9090) | [EXPLORER](http://)
+[RPC](http://empower.srgts.xyz:26657) | [API](http://empower.srgts.xyz:1317) | [gRPC](http://empower.srgts.xyz:9090)
 
 Let's update and install the necessary packages:
 ````
