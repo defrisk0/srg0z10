@@ -1,5 +1,5 @@
 # NEUTRON
-[RPC](http://neutron.srgts.xyz:43657) | [API](http://neutron.srgts.xyz:4517) | [gRPC](http://neutron.srgts.xyz:8390) | [EXPLORER](http://)
+[RPC](http://neutron.srgts.xyz:43657) | [API](http://neutron.srgts.xyz:4517) | [gRPC](http://neutron.srgts.xyz:8390)
 
 Let's update and install the necessary packages:
 ````
