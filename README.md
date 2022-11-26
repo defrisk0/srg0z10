@@ -13,3 +13,10 @@
 * [EMPOWER](https://www.empowerchain.io/) - [MANUAL](https://github.com/defrisk0/testnet_part/tree/main/EMPOWER#empower) | [EXPLORER](https://empower.explorers.guru/validator/empowervaloper180hukhcdehvd7aszl9shkkglrgpujq3y5ue86t)
 * [CROWD CONTROL](https://crowdcontrol.network/) - [EXPLORER](https://explorer.theamsolutions.info/cardchain-test/staking/ccvaloper1y4lg7qhx2yusxvekhwj8gzh2vu006kk0xtczmu)
 * [SUI](https://sui.io/) - [MANUAL](https://github.com/defrisk0/testnet_part/tree/main/SUI#sui-testnet)
+### FINISHED
+* [APTOS: AIT1, AIT2, AIT3](https://aptoslabs.com/)
+* [STRIDE](https://stride.zone/)
+* [QUICKSILVER](https://quicksilver.zone/)
+* [COSMIC HORIZON](https://cosmic-horizon.com/)
+* [ARCHWAY](https://archway.io/)
+* [EVMOS](https://evmos.org/)
