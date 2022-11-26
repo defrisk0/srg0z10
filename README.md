@@ -2,6 +2,7 @@
 [TELEGRAM](https://t.me/srg_z12) | [DISCORD](https://discord.com/users/SRG_TS#3469) | [EMAIL](mailto:sergpsy00@gmail.com) | [TWITTER](https://twitter.com/Z10Serg) | [WEBSITE](http://srgts.space/)
 ## Mainnet participation
 * [FIRMACHAIN](https://firmachain.org/) - [EXPLORER](https://explorer.firmachain.dev/validators/firmavaloper15ynjhls568twd6treerrlqethcyuhnnek2jggd)
+* [RIZON](https://rizon.world/) - [EXPLORER](https://www.mintscan.io/rizon/validators/rizonvaloper1t39j0juzxq9r5x0pmhrqd5nh0vgeshdg5dwyl0)
 ## Testnet participation
 ### 2022
 * [NEUTRON](https://neutron.org/) - [MANUAL](https://github.com/defrisk0/testnet_part/tree/main/NEUTRON#neutron) | [EXPLORER](https://neutron.explorers.guru/validator/neutronvaloper1kc0gm55xt68r5shtnfhtgj2xz2cdxz2haj5dn4)
