@@ -30,18 +30,18 @@ Let's check the version (current as of November 2022 - v0.2.4 commit: 6e6b1143af
 ````
 uptickd version --long
 ````
-Set the correct chain (uptick_7000-1), chooses his moniker and initialize node:
+Set the correct chain (uptick_7000-2), chooses his moniker and initialize node:
 ````
 cd $HOME
 MNK=test
-uptickd config chain-id uptick_7000-1
-uptickd init $MNK --chain-id uptick_7000-1
+uptickd config chain-id uptick_7000-2
+uptickd init $MNK --chain-id uptick_7000-2
 ````
 Download the current genesis file:
 ````
-curl https://raw.githubusercontent.com/UptickNetwork/uptick-testnet/main/uptick_7000-1/genesis.json > $HOME/.uptickd/config/genesis.json
+curl https://raw.githubusercontent.com/UptickNetwork/uptick-testnet/main/uptick_7000-2/genesis.json > $HOME/.uptickd/config/genesis.json
 ````
-Let's check sum genesis file (current as of November 2022 - 9c2a5a9eb74103e3a9ae0599f66b9e665bdd7d67c178ab8308f853602b73be75):
+Let's check sum genesis file (current as of November 2022 - f96764c7ae1bc713b2acc87b5320f2d10ee26716b3daa6cc455cb3a3906f05c2):
 ````
 sha256sum $HOME/.uptickd/config/genesis.json
 ````
@@ -51,8 +51,8 @@ sed -i 's|^minimum-gas-prices *=.*|minimum-gas-prices = "0.0001auptick"|g' $HOME
 ````
 Adding seeds and peers:
 ````
-seeds="61f9e5839cd2c56610af3edd8c3e769502a3a439@seed0.testnet.uptick.network:26656"
-peers="61f9e5839cd2c56610af3edd8c3e769502a3a439@seed0.testnet.uptick.network:26656,5726ef5d4b2258bad3e9fd0e09708d92f791dbaa@116.202.236.115:26656,e24bde7fe207160442fe6b93ee376a739def5757@51.222.248.153:26656,3dbbfac16932869e66e44a9ef443102e6677cf82@154.12.236.153:11656,95231536864d0ce318d6f8b70c744d8179b2cb58@144.76.224.246:46656"
+seeds=""
+peers="eecdfb17919e59f36e5ae6cec2c98eeeac05c0f2@peer0.testnet.uptick.network:26656"
 sed -i -e 's|^seeds *=.*|seeds = "'$seeds'"|; s|^persistent_peers *=.*|persistent_peers = "'$peers'"|' $HOME/.uptickd/config/config.toml
 ````
 Edit pruning parameter:
