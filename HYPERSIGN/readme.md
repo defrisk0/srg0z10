@@ -32,7 +32,6 @@ Set the correct chain (jagrat), chooses his moniker and initialize node:
 ````
 cd $HOME
 MNK=test
-hid-noded config chain-id jagrat
 hid-noded init $MNK --chain-id jagrat
 ````
 Download the current genesis file:
