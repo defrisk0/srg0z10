@@ -1,5 +1,4 @@
 # NEUTRON
-[RPC](http://neutron.srgts.xyz:43657) | [API](http://neutron.srgts.xyz:4517) | [gRPC](http://neutron.srgts.xyz:8390)
 
 Let's update and install the necessary packages:
 ````
@@ -97,7 +96,7 @@ State Sync:
 ````
 sudo systemctl stop neutrond
 neutrond tendermint unsafe-reset-all --home $HOME/.neutrond --keep-addr-book
-SNAP_RPC="http://neutron.srgts.xyz:43657"
+SNAP_RPC=""
 
 LATEST_HEIGHT=$(curl -s $SNAP_RPC/block | jq -r .result.block.header.height); \
 BLOCK_HEIGHT=$((LATEST_HEIGHT - 2000)); \
