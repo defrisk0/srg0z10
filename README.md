@@ -13,6 +13,8 @@
 * [HYPERSIGN](https://hypersign.id/) - [MANUAL](https://github.com/defrisk0/testnet_part/tree/main/HYPERSIGN#hypersign) | [EXPLORER](https://explorer.hypersign.id/hypersign-testnet/staking/hidvaloper1sp54v3zry4df69648r2syas54axfzx0v0pjewn)
 * [CROWD CONTROL](https://crowdcontrol.network/) - [EXPLORER](https://explorer.theamsolutions.info/cardchain-test/staking/ccvaloper1y4lg7qhx2yusxvekhwj8gzh2vu006kk0xtczmu)
 * [SUI](https://sui.io/) - [MANUAL](https://github.com/defrisk0/testnet_part/tree/main/SUI#sui-testnet)
+https://github.com/defrisk0/srg0z10/tree/main/REALIO_NETWORK#realio-network
+* [REALIO NETWORK](https://hypersign.id/) - [MANUAL](https://github.com/defrisk0/srg0z10/tree/main/REALIO_NETWORK#realio-network) | [EXPLORER](https://)
 ### PAUSE
 * [EMPOWER](https://www.empowerchain.io/) - [MANUAL](https://github.com/defrisk0/testnet_part/tree/main/EMPOWER#empower)
 ### FINISHED
