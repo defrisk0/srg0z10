@@ -32,7 +32,7 @@ Set the correct chain (realionetwork_1110-2), chooses his moniker and initialize
 ````
 cd $HOME
 MNK=test
-realio-networkd init $MNK --chain-id realionetwork_1110-2
+realio-networkd init $MNK --recover --chain-id realionetwork_1110-2
 ````
 Download the current genesis file:
 ````
