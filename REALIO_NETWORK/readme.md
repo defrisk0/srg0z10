@@ -28,7 +28,8 @@ Let's check the version (current as of December 2022 - v0.1.0 commit: 97eb631436
 ````
 realio-networkd version --long
 ````
-Set the correct chain (realionetwork_1110-2), chooses his moniker and initialize node:
+Set the correct chain (realionetwork_1110-2), chooses his moniker and initialize node.
+For a possible node rebuild, generate a BIP39 mnemonic 24 words (e.g. here - https://iancoleman.io/bip39/), enter the mnemonic and be sure to.
 ````
 cd $HOME
 MNK=test
