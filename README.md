@@ -13,6 +13,7 @@
 * [CROWD CONTROL](https://crowdcontrol.network/) - [EXPLORER](https://explorer.theamsolutions.info/cardchain-test/staking/ccvaloper1y4lg7qhx2yusxvekhwj8gzh2vu006kk0xtczmu)
 * [SUI](https://sui.io/) - [MANUAL](https://github.com/defrisk0/testnet_part/tree/main/SUI#sui-testnet)
 * [REALIO NETWORK](https://www.realio.fund/) - [MANUAL](https://github.com/defrisk0/srg0z10/tree/main/REALIO_NETWORK#realio-network) | [EXPLORER](https://)
+* [SGE] - [MANUAL](https://github.com/defrisk0/srg0z10/tree/main/SGE#sge) | [EXPLORER](https://blockexplorer.testnet.sgenetwork.io/validators/sgevaloper127axpswd9tq73k6zgyj9752c889uwy3lckq5yn)
 ### PAUSE
 * [EMPOWER](https://www.empowerchain.io/) - [MANUAL](https://github.com/defrisk0/testnet_part/tree/main/EMPOWER#empower)
 ### FINISHED
