@@ -88,13 +88,11 @@ Checking the logs
 ````
 sudo journalctl -u hid-noded -f -o cat
 ````
-[RPC](http://hypersign.srgts.xyz:26657) | [API](http://hypersign.srgts.xyz:1317) | [gRPC](http://hypersign.srgts.xyz:9090)
-
-STATE SYNC:
+State Sync:
 ````
 sudo systemctl stop hid-noded
 hid-noded tendermint unsafe-reset-all --home $HOME/.hid-node --keep-addr-book
-SNAP_RPC="http://hypersign.srgts.xyz:26657"
+SNAP_RPC="http://hypersign.srgts.xyz:41657"
 
 LATEST_HEIGHT=$(curl -s $SNAP_RPC/block | jq -r .result.block.header.height); \
 BLOCK_HEIGHT=$((LATEST_HEIGHT - 2000)); \
