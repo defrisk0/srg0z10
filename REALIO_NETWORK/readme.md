@@ -37,7 +37,7 @@ realio-networkd init $MNK --recover --chain-id realionetwork_1110-2
 ````
 Download the current genesis file:
 ````
-curl -s https://raw.githubusercontent.com/n0okOne/testnets-7/main/realionetwork_1110-2/genesis.json > $HOME/.realio-network/config/genesis.json
+curl -s https://raw.githubusercontent.com/realiotech/testnets/main/realionetwork_1110-2/genesis.json > $HOME/.realio-network/config/genesis.json
 ````
 Let's check sum genesis file (current as of December 2022 - a2f8fae48eb019720ef78524d683a9ca22884dd4e9ba4f8d5b3ac10db1275183):
 ````
