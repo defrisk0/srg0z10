@@ -21,10 +21,10 @@ Install CLI:
 ````
 git clone https://github.com/hypersign-protocol/hid-node.git
 cd hid-node
-git checkout v0.1.3
+git checkout v0.1.4
 make install
 ````
-Let's check the version (current as of November 2022 - v0.0.3 commit: 253df94):
+Let's check the version (current as of December 2022 - v0.1.4 commit: c574239):
 ````
 hid-noded version --long
 ````
@@ -38,7 +38,7 @@ Download the current genesis file:
 ````
 curl -s https://raw.githubusercontent.com/hypersign-protocol/networks/master/testnet/jagrat/final_genesis.json > $HOME/.hid-node/config/genesis.json
 ````
-Let's check sum genesis file (current as of November 2022 - 7de2e77cff6d601387a46a760e9c0d7a573b2cfdbdaebb0f04512878543fc0a1):
+Let's check sum genesis file (current as of December 2022 - 7de2e77cff6d601387a46a760e9c0d7a573b2cfdbdaebb0f04512878543fc0a1):
 ````
 sha256sum $HOME/.hid-node/config/genesis.json
 ````
