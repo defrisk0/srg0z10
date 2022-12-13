@@ -5,6 +5,7 @@
 * [RIZON](https://rizon.world/) - [EXPLORER](https://www.mintscan.io/rizon/validators/rizonvaloper1t39j0juzxq9r5x0pmhrqd5nh0vgeshdg5dwyl0)
 ## Testnet participation
 ### 2022
+* [HUMANS](https://humans.ai/) - [MANUAL](https://github.com/defrisk0/testnet_part/tree/main/HUMANS#humans) | [EXPLORER](https://explorer.humans.zone/humans-testnet/staking/humanvaloper1g3ueu32skaxsfz5ue3wtrsnd236m6spntavmkh)
 * [UPTICK](https://www.uptick.network/) - [MANUAL](https://github.com/defrisk0/testnet_part/tree/main/UPTICK#uptick) | [EXPLORER](https://uptick.explorers.guru/validator/uptickvaloper1xk0zpxmxjgt27ujw50g79c4kzxdpx2pg0df7kk)
 * [GITOPIA](https://gitopia.com/) - [EXPLORER](https://gitopia.explorers.guru/validator/gitopiavaloper1zcy7h3cqsdhlcqqc03nynnvu7r7ys243jkd4ft)
 * [SEI NETWORK](https://www.seinetwork.io/) - [EXPLORER](https://sei.explorers.guru/validator/seivaloper1z7skqqjgfhmr95vuvkm2chlcagg35cl9l0d00r)
