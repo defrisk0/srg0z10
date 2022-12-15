@@ -1,5 +1,5 @@
 ## SRG0Z10
-[TELEGRAM](https://t.me/srg_z12) | [DISCORD](https://discord.com/users/SRG_TS#3469) | [EMAIL](mailto:sergpsy00@gmail.com) | [TWITTER](https://twitter.com/Z10Serg) | [WEBSITE](http://srgts.space/)
+[TELEGRAM](https://t.me/srg_z12) | [DISCORD](https://discord.com/users/SRG_TS#3469) | [EMAIL](mailto:sergpsy00@gmail.com) | [TWITTER](https://twitter.com/Z10Serg) | [WEBSITE](http://)
 ## Mainnet participation
 * [FIRMACHAIN](https://firmachain.org/) - [EXPLORER](https://explorer.firmachain.dev/validators/firmavaloper15ynjhls568twd6treerrlqethcyuhnnek2jggd)
 * [RIZON](https://rizon.world/) - [EXPLORER](https://www.mintscan.io/rizon/validators/rizonvaloper1t39j0juzxq9r5x0pmhrqd5nh0vgeshdg5dwyl0)
