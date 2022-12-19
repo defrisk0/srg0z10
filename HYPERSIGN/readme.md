@@ -21,10 +21,10 @@ Install CLI:
 ````
 git clone https://github.com/hypersign-protocol/hid-node.git
 cd hid-node
-git checkout v0.1.4
+git checkout v0.1.5
 make install
 ````
-Let's check the version (current as of December 2022 - v0.1.4 commit: c574239):
+Let's check the version (current as of December 2022 - v0.1.5 commit: 7913651):
 ````
 hid-noded version --long
 ````
