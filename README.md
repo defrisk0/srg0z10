@@ -4,7 +4,8 @@
 * [FIRMACHAIN](https://firmachain.org/) - [EXPLORER](https://explorer.firmachain.dev/validators/firmavaloper15ynjhls568twd6treerrlqethcyuhnnek2jggd) | [RESTAKE](https://restake.app/rizon/rizonvaloper1t39j0juzxq9r5x0pmhrqd5nh0vgeshdg5dwyl0/stake)
 * [RIZON](https://rizon.world/) - [EXPLORER](https://www.mintscan.io/rizon/validators/rizonvaloper1t39j0juzxq9r5x0pmhrqd5nh0vgeshdg5dwyl0) | [RESTAKE](https://restake.app/rizon/rizonvaloper1t39j0juzxq9r5x0pmhrqd5nh0vgeshdg5dwyl0/stake)
 ## Testnet participation
-### 2022
+### 2023
+* [LAVA](https://lavanet.xyz/) - [MANUAL]() | [EXPLORER](https://lava.explorers.guru/validator/lava@valoper1tuzskqswcjg7fslt4yal57hqqjwx9qsu8kxvh5)
 * [HUMANS](https://humans.ai/) - [MANUAL](https://github.com/defrisk0/testnet_part/tree/main/HUMANS#humans) | [EXPLORER](https://explorer.humans.zone/humans-testnet/staking/humanvaloper1g3ueu32skaxsfz5ue3wtrsnd236m6spntavmkh)
 * [UPTICK](https://uptick.network/) - [MANUAL](https://github.com/defrisk0/testnet_part/tree/main/UPTICK#uptick) | [EXPLORER](https://uptick.explorers.guru/validator/uptickvaloper1xk0zpxmxjgt27ujw50g79c4kzxdpx2pg0df7kk)
 * [GITOPIA](https://gitopia.com/) - [EXPLORER](https://gitopia.explorers.guru/validator/gitopiavaloper1zcy7h3cqsdhlcqqc03nynnvu7r7ys243jkd4ft)
