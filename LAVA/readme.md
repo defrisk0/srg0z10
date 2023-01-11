@@ -94,7 +94,7 @@ State Sync:
 ````
 sudo systemctl stop lavad
 cp $HOME/.lava/data/priv_validator_state.json $HOME/.lava/priv_validator_state.json.backup
-empowerd tendermint unsafe-reset-all --home $HOME/.lavad --keep-addr-book
+lavad tendermint unsafe-reset-all --home $HOME/.lava --keep-addr-book
 SNAP_RPC="http://lava.srgts.xyz:25557"
 
 LATEST_HEIGHT=$(curl -s $SNAP_RPC/block | jq -r .result.block.header.height); \
