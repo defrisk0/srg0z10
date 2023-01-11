@@ -24,7 +24,7 @@ cd realio-network
 git checkout tags/v0.6.3
 make install
 ````
-Let's check the version (current as of December 2022 - v0.6.3 commit: 9c91fde60ac8c27a12d6ef92843d806496039823):
+Let's check the version (current as of January 2023 - v0.6.3 commit: 9c91fde60ac8c27a12d6ef92843d806496039823):
 ````
 realio-networkd version --long
 ````
@@ -39,7 +39,7 @@ Download the current genesis file:
 ````
 curl -s https://raw.githubusercontent.com/realiotech/testnets/main/realionetwork_1110-2/genesis.json > $HOME/.realio-network/config/genesis.json
 ````
-Let's check sum genesis file (current as of December 2022 - a2f8fae48eb019720ef78524d683a9ca22884dd4e9ba4f8d5b3ac10db1275183):
+Let's check sum genesis file (current as of January 2023 - a2f8fae48eb019720ef78524d683a9ca22884dd4e9ba4f8d5b3ac10db1275183):
 ````
 sha256sum $HOME/.realio-network/config/genesis.json
 ````
@@ -58,6 +58,7 @@ Edit pruning parameter:
 sed -i 's|pruning = "default"|pruning = "custom"|g' $HOME/.realio-network/config/app.toml
 sed -i 's|pruning-keep-recent = "0"|pruning-keep-recent = "100"|g' $HOME/.realio-network/config/app.toml
 sed -i 's|pruning-interval = "0"|pruning-interval = "10"|g' $HOME/.realio-network/config/app.toml
+sed -i 's|^snapshot-interval *=.*|snapshot-interval = 2000|g' $HOME/.realio-network/config/app.toml
 ````
 Create a service file:
 ````
@@ -93,6 +94,7 @@ State Sync:
 ````
 # SRG0Z10 peer: 672c28ea5435aeffe5ae057774f9175a740ab4f2@realio.srgts.xyz:37656
 sudo systemctl stop realio-networkd
+cp $HOME/.realio-network/data/priv_validator_state.json $HOME/.realio-network/priv_validator_state.json.backup
 neutrond tendermint unsafe-reset-all --home $HOME/.neutrond --keep-addr-book
 SNAP_RPC="http://realio.srgts.xyz:37657"
 
@@ -107,5 +109,6 @@ s|^(rpc_servers[[:space:]]+=[[:space:]]+).*$|\1\"$SNAP_RPC,$SNAP_RPC\"| ; \
 s|^(trust_height[[:space:]]+=[[:space:]]+).*$|\1$BLOCK_HEIGHT| ; \
 s|^(trust_hash[[:space:]]+=[[:space:]]+).*$|\1\"$TRUST_HASH\"|" $HOME/.realio-network/config/config.toml
 
+mv $HOME/.realio-network/priv_validator_state.json.backup $HOME/.realio-network/data/priv_validator_state.json
 sudo systemctl restart realio-networkd && sudo journalctl -u realio-networkd -f -o cat
 ````
