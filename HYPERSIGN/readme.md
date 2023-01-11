@@ -24,7 +24,7 @@ cd hid-node
 git checkout v0.1.5
 make install
 ````
-Let's check the version (current as of December 2022 - v0.1.5 commit: 7913651):
+Let's check the version (current as of January 2023 - v0.1.5 commit: 7913651):
 ````
 hid-noded version --long
 ````
@@ -38,7 +38,7 @@ Download the current genesis file:
 ````
 curl -s https://raw.githubusercontent.com/hypersign-protocol/networks/master/testnet/jagrat/final_genesis.json > $HOME/.hid-node/config/genesis.json
 ````
-Let's check sum genesis file (current as of December 2022 - 7de2e77cff6d601387a46a760e9c0d7a573b2cfdbdaebb0f04512878543fc0a1):
+Let's check sum genesis file (current as of January 2023 - 7de2e77cff6d601387a46a760e9c0d7a573b2cfdbdaebb0f04512878543fc0a1):
 ````
 sha256sum $HOME/.hid-node/config/genesis.json
 ````
@@ -57,6 +57,7 @@ Edit pruning parameter:
 sed -i 's|pruning = "default"|pruning = "custom"|g' $HOME/.hid-node/config/app.toml
 sed -i 's|pruning-keep-recent = "0"|pruning-keep-recent = "100"|g' $HOME/.hid-node/config/app.toml
 sed -i 's|pruning-interval = "0"|pruning-interval = "10"|g' $HOME/.hid-node/config/app.toml
+sed -i 's|^snapshot-interval *=.*|snapshot-interval = 2000|g' $HOME/.hid-node/config/app.toml
 ````
 Create a service file:
 ````
@@ -91,6 +92,7 @@ sudo journalctl -u hid-noded -f -o cat
 State Sync:
 ````
 sudo systemctl stop hid-noded
+cp $HOME/.hid-node/data/priv_validator_state.json $HOME/.hid-node/priv_validator_state.json.backup
 hid-noded tendermint unsafe-reset-all --home $HOME/.hid-node --keep-addr-book
 SNAP_RPC="http://hypersign.srgts.xyz:41657"
 
@@ -105,5 +107,6 @@ s|^(rpc_servers[[:space:]]+=[[:space:]]+).*$|\1\"$SNAP_RPC,$SNAP_RPC\"| ; \
 s|^(trust_height[[:space:]]+=[[:space:]]+).*$|\1$BLOCK_HEIGHT| ; \
 s|^(trust_hash[[:space:]]+=[[:space:]]+).*$|\1\"$TRUST_HASH\"|" $HOME/.hid-node/config/config.toml
 
+mv $HOME/.hid-node/priv_validator_state.json.backup $HOME/.hid-node/data/priv_validator_state.json
 sudo systemctl restart hid-noded && sudo journalctl -u hid-noded -f -o cat
 ````
