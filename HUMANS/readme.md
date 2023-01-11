@@ -25,7 +25,7 @@ tar -xvf humans_latest_linux_amd64.tar.gz
 sudo mv humansd /usr/local/bin/humansd
 rm humans_latest_linux_amd64.tar.gz
 ````
-Let's check the version (current as of December 2022 - latest commit: f66f3bd9af29ce790034e764332e6abacd0d5885):
+Let's check the version (current as of January 2023 - latest commit: f66f3bd9af29ce790034e764332e6abacd0d5885):
 ````
 humansd version --long
 ````
@@ -41,7 +41,7 @@ Download the current genesis file:
 curl -s https://rpc-testnet.humans.zone/genesis | jq -r .result.genesis > genesis.json
 cp genesis.json $HOME/.humans/config/genesis.json
 ````
-Let's check sum genesis file (current as of December 2022 - f5fef1b574a07965c005b3d7ad013b27db197f57146a12c018338d7e58a4b5cd):
+Let's check sum genesis file (current as of January 2023 - f5fef1b574a07965c005b3d7ad013b27db197f57146a12c018338d7e58a4b5cd):
 ````
 sha256sum $HOME/.humans/config/genesis.json
 ````
@@ -60,6 +60,7 @@ Edit pruning parameter:
 sed -i 's|pruning = "default"|pruning = "custom"|g' $HOME/.humans/config/app.toml
 sed -i 's|pruning-keep-recent = "0"|pruning-keep-recent = "100"|g' $HOME/.humans/config/app.toml
 sed -i 's|pruning-interval = "0"|pruning-interval = "10"|g' $HOME/.humans/config/app.toml
+sed -i 's|^snapshot-interval *=.*|snapshot-interval = 2000|g' $HOME/.humans/config/app.toml
 ````
 Edit time parameters:
 ````
@@ -106,6 +107,7 @@ sudo journalctl -u humansd -f -o cat
 State Sync:
 ````
 sudo systemctl stop humansd
+cp $HOME/.humans/data/priv_validator_state.json $HOME/.humans/priv_validator_state.json.backup
 humansd tendermint unsafe-reset-all --home $HOME/.humans --keep-addr-book
 SNAP_RPC="http://humans.srgts.xyz:16657"
 
@@ -120,5 +122,6 @@ s|^(rpc_servers[[:space:]]+=[[:space:]]+).*$|\1\"$SNAP_RPC,$SNAP_RPC\"| ; \
 s|^(trust_height[[:space:]]+=[[:space:]]+).*$|\1$BLOCK_HEIGHT| ; \
 s|^(trust_hash[[:space:]]+=[[:space:]]+).*$|\1\"$TRUST_HASH\"|" $HOME/.humans/config/config.toml
 
+mv $HOME/.humans/priv_validator_state.json.backup $HOME/.humans/data/priv_validator_state.json
 sudo systemctl restart humansd && sudo journalctl -u humansd -f -o cat
 ````
