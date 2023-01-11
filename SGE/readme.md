@@ -1,5 +1,5 @@
 # SGE 
-[RPC](http://) | [API](http://) | [gRPC](http://)
+[RPC](http://sge.srgts.xyz:16657) | [API](http://sge.srgts.xyz:1417) | [gRPC](http://sge.srgts.xyz:9490)
 
 Let's update and install the necessary packages:
 ````
@@ -25,7 +25,7 @@ git fetch --tags
 git checkout v0.0.3
 make install
 ````
-Let's check the version (current as of December 2022 - v0.0.3 commit: c2f074f15fa895b0d8e67a9d88bfd2b9d9833b2f):
+Let's check the version (current as of January 2023 - v0.0.3 commit: c2f074f15fa895b0d8e67a9d88bfd2b9d9833b2f):
 ````
 sged version --long
 ````
@@ -40,7 +40,7 @@ Download the current genesis file:
 ````
 curl -s https://raw.githubusercontent.com/sge-network/networks/master/sge-testnet-1/genesis.json > $HOME/.sge/config/genesis.json
 ````
-Let's check sum genesis file (current as of December 2022 - 9a36a608e66fb194f404284c2d65aa5a7eb422b3efbd50869f270dfe65713e5b):
+Let's check sum genesis file (current as of January 2023 - 9a36a608e66fb194f404284c2d65aa5a7eb422b3efbd50869f270dfe65713e5b):
 ````
 sha256sum $HOME/.sge/config/genesis.json
 ````
@@ -59,6 +59,7 @@ Edit pruning parameter:
 sed -i 's|pruning = "default"|pruning = "custom"|g' $HOME/.sge/config/app.toml
 sed -i 's|pruning-keep-recent = "0"|pruning-keep-recent = "100"|g' $HOME/.sge/config/app.toml
 sed -i 's|pruning-interval = "0"|pruning-interval = "10"|g' $HOME/.sge/config/app.toml
+sed -i 's|^snapshot-interval *=.*|snapshot-interval = 2000|g' $HOME/.sge/config/app.toml
 ````
 Create a service file:
 ````
@@ -93,8 +94,9 @@ sudo journalctl -u sged -f -o cat
 State Sync:
 ````
 sudo systemctl stop sged
+cp $HOME/.sge/data/priv_validator_state.json $HOME/.sge/priv_validator_state.json.backup
 sged tendermint unsafe-reset-all --home $HOME/.sge --keep-addr-book
-SNAP_RPC=""
+SNAP_RPC="http://sge.srgts.xyz:16657"
 
 LATEST_HEIGHT=$(curl -s $SNAP_RPC/block | jq -r .result.block.header.height); \
 BLOCK_HEIGHT=$((LATEST_HEIGHT - 2000)); \
@@ -107,5 +109,6 @@ s|^(rpc_servers[[:space:]]+=[[:space:]]+).*$|\1\"$SNAP_RPC,$SNAP_RPC\"| ; \
 s|^(trust_height[[:space:]]+=[[:space:]]+).*$|\1$BLOCK_HEIGHT| ; \
 s|^(trust_hash[[:space:]]+=[[:space:]]+).*$|\1\"$TRUST_HASH\"|" $HOME/.sge/config/config.toml
 
+mv $HOME/.sge/priv_validator_state.json.backup $HOME/.sge/data/priv_validator_state.json
 sudo systemctl restart sged && sudo journalctl -u sged -f -o cat
 ````
