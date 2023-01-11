@@ -26,7 +26,7 @@ chmod +x /usr/local/bin/uptickd
 rm -rf uptick-linux-amd64-v0.2.4
 rm -rf uptick-linux-amd64-v0.2.4.tar.gz
 ````
-Let's check the version (current as of November 2022 - v0.2.4 commit: 6e6b1143af1a159249d112d190bf143536b1b1f2):
+Let's check the version (current as of January 2023 - v0.2.4 commit: 6e6b1143af1a159249d112d190bf143536b1b1f2):
 ````
 uptickd version --long
 ````
@@ -41,7 +41,7 @@ Download the current genesis file:
 ````
 curl https://raw.githubusercontent.com/UptickNetwork/uptick-testnet/main/uptick_7000-2/genesis.json > $HOME/.uptickd/config/genesis.json
 ````
-Let's check sum genesis file (current as of November 2022 - f96764c7ae1bc713b2acc87b5320f2d10ee26716b3daa6cc455cb3a3906f05c2):
+Let's check sum genesis file (current as of January 2023 - f96764c7ae1bc713b2acc87b5320f2d10ee26716b3daa6cc455cb3a3906f05c2):
 ````
 sha256sum $HOME/.uptickd/config/genesis.json
 ````
@@ -60,6 +60,7 @@ Edit pruning parameter:
 sed -i 's|pruning = "default"|pruning = "custom"|g' $HOME/.uptickd/config/app.toml
 sed -i 's|pruning-keep-recent = "0"|pruning-keep-recent = "100"|g' $HOME/.uptickd/config/app.toml
 sed -i 's|pruning-interval = "0"|pruning-interval = "10"|g' $HOME/.uptickd/config/app.toml
+sed -i 's|^snapshot-interval *=.*|snapshot-interval = 2000|g' $HOME/.uptickd/config/app.toml
 ````
 Create a service file:
 ````
@@ -94,6 +95,7 @@ sudo journalctl -u uptickd -f -o cat
 State Sync:
 ````
 sudo systemctl stop uptickd
+cp $HOME/.uptickd/data/priv_validator_state.json $HOME/.uptickd/priv_validator_state.json.backup
 uptickd tendermint unsafe-reset-all --home $HOME/.uptickd --keep-addr-book
 SNAP_RPC="http://uptick.srgts.xyz:26657"
 
@@ -108,5 +110,6 @@ s|^(rpc_servers[[:space:]]+=[[:space:]]+).*$|\1\"$SNAP_RPC,$SNAP_RPC\"| ; \
 s|^(trust_height[[:space:]]+=[[:space:]]+).*$|\1$BLOCK_HEIGHT| ; \
 s|^(trust_hash[[:space:]]+=[[:space:]]+).*$|\1\"$TRUST_HASH\"|" $HOME/.uptickd/config/config.toml
 
+mv $HOME/.uptickd/priv_validator_state.json.backup $HOME/.uptickd/data/priv_validator_state.json
 sudo systemctl uptickd neutrond && sudo journalctl -u uptickd -f -o cat
 ````
