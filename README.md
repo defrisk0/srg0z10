@@ -5,6 +5,7 @@
 * [RIZON](https://rizon.world/) - [EXPLORER](https://www.mintscan.io/rizon/validators/rizonvaloper1t39j0juzxq9r5x0pmhrqd5nh0vgeshdg5dwyl0) | [RESTAKE](https://restake.app/rizon/rizonvaloper1t39j0juzxq9r5x0pmhrqd5nh0vgeshdg5dwyl0/stake)
 ## Testnet participation
 ### 2023
+* [SUI TESTNET (Wave 2)](https://sui.io/) - [MANUAL](https://github.com/defrisk0/testnet_part/tree/main/SUI#sui-testnet)
 * [LAVA](https://lavanet.xyz/) - [MANUAL](https://github.com/defrisk0/srg0z10/tree/main/LAVA#lava) | [EXPLORER](https://lava.explorers.guru/validator/lava@valoper1tuzskqswcjg7fslt4yal57hqqjwx9qsu8kxvh5)
 * [HUMANS](https://humans.ai/) - [MANUAL](https://github.com/defrisk0/testnet_part/tree/main/HUMANS#humans) | [EXPLORER](https://explorer.humans.zone/humans-testnet/staking/humanvaloper1g3ueu32skaxsfz5ue3wtrsnd236m6spntavmkh)
 * [UPTICK](https://uptick.network/) - [MANUAL](https://github.com/defrisk0/testnet_part/tree/main/UPTICK#uptick) | [EXPLORER](https://uptick.explorers.guru/validator/uptickvaloper1xk0zpxmxjgt27ujw50g79c4kzxdpx2pg0df7kk)
@@ -18,7 +19,6 @@
 * [FANTOM TESTNET - BLAST API](https://fantom.foundation/)
 ### PAUSE
 * [EMPOWER](https://empowerchain.io/) - [MANUAL](https://github.com/defrisk0/testnet_part/tree/main/EMPOWER#empower)
-* [SUI TESTNET](https://sui.io/) - [MANUAL](https://github.com/defrisk0/testnet_part/tree/main/SUI#sui-testnet)
 ### FINISHED
 * [DEWEB](https://deweb.services/)
 * [NEUTRON](https://neutron.org/) - [MANUAL](https://github.com/defrisk0/testnet_part/tree/main/NEUTRON#neutron)
