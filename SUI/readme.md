@@ -14,18 +14,21 @@ Install CLI:
 cd $HOME
 git clone https://github.com/MystenLabs/sui.git
 cd sui
-git checkout 99b4e7ca83b6d1abe312f5afc04840dce331238b
-cargo build --release -p sui-node
+git remote add upstream https://github.com/MystenLabs/sui
+git fetch upstream
+git checkout -B testnet --track upstream/testnet
+cargo build -p sui-node -p sui --release
 mv ~/sui/target/release/sui-node /usr/local/bin/
+mv ~/sui/target/release/sui /usr/local/bin/
 ````
-Let's check the version (current as of November 2022 - v0.1.0 commit: testnet 99b4e7ca8):
+Let's check the version (current as of January 2023: testnet a363182b0):
 ````
 git branch -v
 ````
 Download the current genesis.blob file and configure the node:
 ````
 cp ~/sui/crates/sui-config/data/fullnode-template.yaml /var/sui/fullnode.yaml
-wget -O /var/sui/genesis.blob https://github.com/SuiExternal/sui-external/raw/main/genesis.blob
+wget -O /var/sui/genesis.blob https://github.com/MystenLabs/sui-genesis/raw/main/testnet/genesis.blob
 sed -i.bak "s/db-path:.*/db-path: \"\/var\/sui\/suidb\"/ ; s/genesis-file-location:.*/genesis-file-location: \"\/var\/sui\/genesis.blob\"/" /var/sui/fullnode.yaml
 ````
 Create a service file:
@@ -54,7 +57,7 @@ Checking the logs
 ````
 sudo journalctl -u suid -f -o cat
 ````
-Let's check release (current as of November 2022 - v0.15.3):
+Let's check release (current as of January 2023 - v0.22.0):
 ````
 curl -s -X POST http://127.0.0.1:9000 -H 'Content-Type: application/json' -d '{ "jsonrpc":"2.0", "method":"rpc.discover","id":1}' | jq .result.info
 ````
