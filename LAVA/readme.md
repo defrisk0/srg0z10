@@ -60,6 +60,14 @@ sed -i 's|pruning-keep-recent = "0"|pruning-keep-recent = "100"|g' $HOME/.lava/c
 sed -i 's|pruning-interval = "0"|pruning-interval = "10"|g' $HOME/.lava/config/app.toml
 sed -i 's|^snapshot-interval *=.*|snapshot-interval = 2000|g' $HOME/.lava/config/app.toml
 ````
+Edit block time parameter:
+````
+sed -i 's/create_empty_blocks = .*/create_empty_blocks = true/g' $HOME/.lava/config/app.toml
+sed -i 's/create_empty_blocks_interval = ".*s"/create_empty_blocks_interval = "60s"/g' $HOME/.lava/config/app.toml
+sed -i 's/timeout_propose = ".*s"/timeout_propose = "60s"/g' $HOME/.lava/config/app.toml
+sed -i 's/timeout_commit = ".*s"/timeout_commit = "60s"/g' $HOME/.lava/config/app.toml
+sed -i 's/timeout_broadcast_tx_commit = ".*s"/timeout_broadcast_tx_commit = "601s"/g' $HOME/.lava/config/app.toml
+````
 Create a service file:
 ````
 sudo tee /etc/systemd/system/lavad.service > /dev/null << EOF
