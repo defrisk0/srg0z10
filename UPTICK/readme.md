@@ -19,14 +19,12 @@ source $HOME/.bash_profile
 ````
 Install CLI:
 ````
-curl -L -k https://github.com/UptickNetwork/uptick/releases/download/v0.2.4/uptick-linux-amd64-v0.2.4.tar.gz
-tar -xvzf uptick-linux-amd64-v0.2.4.tar.gz
-sudo mv -f uptick-linux-amd64-v0.2.4/uptickd /usr/local/bin/uptickd
-chmod +x /usr/local/bin/uptickd
-rm -rf uptick-linux-amd64-v0.2.4
-rm -rf uptick-linux-amd64-v0.2.4.tar.gz
+git clone https://github.com/UptickNetwork/uptick.git
+cd uptick
+git checkout v0.2.5
+make install
 ````
-Let's check the version (current as of January 2023 - v0.2.4 commit: 6e6b1143af1a159249d112d190bf143536b1b1f2):
+Let's check the version (current as of February 2023 - v0.2.5 commit: 17716164d170aa3bd1ca386f1216f101f3f60c5c):
 ````
 uptickd version --long
 ````
@@ -41,7 +39,7 @@ Download the current genesis file:
 ````
 curl https://raw.githubusercontent.com/UptickNetwork/uptick-testnet/main/uptick_7000-2/genesis.json > $HOME/.uptickd/config/genesis.json
 ````
-Let's check sum genesis file (current as of January 2023 - f96764c7ae1bc713b2acc87b5320f2d10ee26716b3daa6cc455cb3a3906f05c2):
+Let's check sum genesis file (current as of February 2023 - f96764c7ae1bc713b2acc87b5320f2d10ee26716b3daa6cc455cb3a3906f05c2):
 ````
 sha256sum $HOME/.uptickd/config/genesis.json
 ````
