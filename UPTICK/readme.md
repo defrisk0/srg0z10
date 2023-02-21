@@ -109,5 +109,5 @@ s|^(trust_height[[:space:]]+=[[:space:]]+).*$|\1$BLOCK_HEIGHT| ; \
 s|^(trust_hash[[:space:]]+=[[:space:]]+).*$|\1\"$TRUST_HASH\"|" $HOME/.uptickd/config/config.toml
 
 mv $HOME/.uptickd/priv_validator_state.json.backup $HOME/.uptickd/data/priv_validator_state.json
-sudo systemctl uptickd neutrond && sudo journalctl -u uptickd -f -o cat
+sudo systemctl restart uptickd && sudo journalctl -u uptickd -f -o cat
 ````
