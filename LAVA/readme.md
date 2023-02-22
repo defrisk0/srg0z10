@@ -72,7 +72,7 @@ Create a service file:
 ````
 sudo tee /etc/systemd/system/lavad.service > /dev/null << EOF
 [Unit]
-Description=EMPOWER NODE
+Description=LAVA NODE
 After=network-online.target
 [Service]
 User=$USER
