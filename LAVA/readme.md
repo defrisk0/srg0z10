@@ -1,5 +1,5 @@
 # LAVA
-[RPC](http://lava.srgts.xyz:25557) | [API](http://lava.srgts.xyz:5317) | [gRPC](http://lava.srgts.xyz:9590)
+[RPC](http://lava.srgts.xyz:23357) | [API](http://lava.srgts.xyz:3317) | [gRPC](http://lava.srgts.xyz:9391)
 
 Let's update and install the necessary packages:
 ````
