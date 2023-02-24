@@ -21,10 +21,10 @@ Install CLI:
 ````
 git clone https://github.com/UptickNetwork/uptick.git
 cd uptick
-git checkout v0.2.5
+git checkout v0.2.6
 make install
 ````
-Let's check the version (current as of February 2023 - v0.2.5 commit: 17716164d170aa3bd1ca386f1216f101f3f60c5c):
+Let's check the version (current as of February 2023 - v0.2.6 commit: 17716164d170aa3bd1ca386f1216f101f3f60c5c):
 ````
 uptickd version --long
 ````
