@@ -5,7 +5,7 @@
 * [RIZON](https://rizon.world/) - [EXPLORER](https://www.mintscan.io/rizon/validators/rizonvaloper1t39j0juzxq9r5x0pmhrqd5nh0vgeshdg5dwyl0) | [RESTAKE](https://restake.app/rizon/rizonvaloper1t39j0juzxq9r5x0pmhrqd5nh0vgeshdg5dwyl0/stake)
 ## Testnet participation
 ### 2023
-* [ANDROMEDA](https://lavanet.xyz/) - [MANUAL](https://github.com/defrisk0/srg0z10/tree/main/ANDROMEDA#andromeda) | [EXPLORER](https://andromeda.explorers.guru/validator/andrvaloper1jttezu48m5ndghe8vdv2ucm43sjs5my5hsumt5)
+* [ANDROMEDA](https://andromedaprotocol.io/) - [MANUAL](https://github.com/defrisk0/srg0z10/tree/main/ANDROMEDA#andromeda) | [EXPLORER](https://andromeda.explorers.guru/validator/andrvaloper1jttezu48m5ndghe8vdv2ucm43sjs5my5hsumt5)
 * [LAVA](https://lavanet.xyz/) - [MANUAL](https://github.com/defrisk0/srg0z10/tree/main/LAVA#lava) | [EXPLORER](https://lava.explorers.guru/validator/lava@valoper1tuzskqswcjg7fslt4yal57hqqjwx9qsu8kxvh5)
 * [UPTICK](https://uptick.network/) - [MANUAL](https://github.com/defrisk0/testnet_part/tree/main/UPTICK#uptick) | [EXPLORER](https://uptick.explorers.guru/validator/uptickvaloper1xk0zpxmxjgt27ujw50g79c4kzxdpx2pg0df7kk)
 * [GITOPIA](https://gitopia.com/) - [EXPLORER](https://gitopia.explorers.guru/validator/gitopiavaloper1zcy7h3cqsdhlcqqc03nynnvu7r7ys243jkd4ft)
