@@ -21,10 +21,10 @@ Install CLI:
 ````
 git clone https://github.com/lavanet/lava
 cd lava
-git checkout v0.6.0-RC3
+git checkout v0.7.0
 make install
 ````
-Let's check the version (current as of February 2023 - v0.6.0-RC3 commit: c7f7556cd1cb5bda4ae8a735beb55f82e38014dc):
+Let's check the version (current as of March 2023 - v0.7.0 commit: 5eecc1a2eab6aeee60f328ef458e1a07d947f242):
 ````
 lavad version --long
 ````
@@ -39,7 +39,7 @@ Download the current genesis file:
 ````
 curl -s https://raw.githubusercontent.com/K433QLtr6RA9ExEq/GHFkqmTzpdNLDd6T/main/testnet-1/genesis_json/genesis.json > $HOME/.lava/config/genesis.json
 ````
-Let's check sum genesis file (current as of February 2023 - 72170a8a7314cb79bc57a60c1b920e26457769667ce5c2ff0595b342c0080d78):
+Let's check sum genesis file (current as of March 2023 - 72170a8a7314cb79bc57a60c1b920e26457769667ce5c2ff0595b342c0080d78):
 ````
 sha256sum $HOME/.lava/config/genesis.json
 ````
