@@ -21,10 +21,10 @@ Install CLI:
 ````
 git clone https://github.com/realiotech/realio-network.git
 cd realio-network
-git checkout v0.8.0-rc2
+git checkout v0.8.0-rc3
 make install
 ````
-Let's check the version (current as of March 2023 - v0.8.0-rc2 commit: 4f1a74abc74a34094a67c3ef479739dacc78ae42):
+Let's check the version (current as of March 2023 - v0.8.0-rc3 commit: 5c17ee90da6d8c16739b4336b835e0193125f8df):
 ````
 realio-networkd version --long
 ````
