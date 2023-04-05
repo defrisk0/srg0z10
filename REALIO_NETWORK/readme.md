@@ -21,26 +21,26 @@ Install CLI:
 ````
 git clone https://github.com/realiotech/realio-network.git
 cd realio-network
-git checkout v0.8.0-rc3
+git checkout v0.8.0-rc4
 make install
 ````
-Let's check the version (current as of March 2023 - v0.8.0-rc3 commit: 5c17ee90da6d8c16739b4336b835e0193125f8df):
+Let's check the version (current as of March 2023 - v0.8.0-rc4 commit: 692d8ccbd4c229135445d82b51bd2dfd52224651):
 ````
 realio-networkd version --long
 ````
-Set the correct chain (realionetwork_3300-1), chooses his moniker and initialize node.
+Set the correct chain (realionetwork_3300-2), chooses his moniker and initialize node.
 For a possible node rebuild, generate a BIP39 mnemonic 24 words (e.g. here - https://iancoleman.io/bip39/), enter the mnemonic and be sure to.
 ````
 cd $HOME
 MNK=test
-realio-networkd config chain-id realionetwork_3300-1
-realio-networkd init $MNK --chain-id realionetwork_3300-1
+realio-networkd config chain-id realionetwork_3300-2
+realio-networkd init $MNK --chain-id realionetwork_3300-2
 ````
 Download the current genesis file:
 ````
-curl -s https://raw.githubusercontent.com/realiotech/testnets/main/realionetwork_3300-1/genesis.json > $HOME/.realio-network/config/genesis.json
+curl -s https://raw.githubusercontent.com/realiotech/testnets/main/realionetwork_3300-2/genesis.json > $HOME/.realio-network/config/genesis.json
 ````
-Let's check sum genesis file (current as of March 2023 - 695c10ad99740908d6a1efb2260b51eeeb1c496ac3e515fcf18933b51633d2e8):
+Let's check sum genesis file (current as of March 2023 - 7e3fef8375567d9cbffbbc9e32907c3c87143fd79ef2b6a1f13d232d89057ddc):
 ````
 sha256sum $HOME/.realio-network/config/genesis.json
 ````
@@ -51,7 +51,7 @@ sed -i 's|^minimum-gas-prices *=.*|minimum-gas-prices = "0.0001ario"|g' $HOME/.r
 Adding seeds and peers:
 ````
 seeds=""
-peers="ec2dbd6e5d25501c50fb8585b5678a7460ef11da@144.126.196.99:26656,5bd91f6e7e3bcaaddead32fd37d67458723fec73@159.223.132.183:26656"
+peers="4d31b1306f36a7ac657a6ef0ba9fc14c0ac2bd7d@188.143.170.30:26656,51db60ff4c8c49bd84cf7cb93033772433a51be9@5.188.118.105:26656"
 sed -i -e 's|^seeds *=.*|seeds = "'$seeds'"|; s|^persistent_peers *=.*|persistent_peers = "'$peers'"|' $HOME/.realio-network/config/config.toml
 ````
 Edit pruning parameter:
@@ -95,7 +95,7 @@ State Sync:
 ````
 sudo systemctl stop realio-networkd
 cp $HOME/.realio-network/data/priv_validator_state.json $HOME/.realio-network/priv_validator_state.json.backup
-neutrond tendermint unsafe-reset-all --home $HOME/.neutrond --keep-addr-book
+realio-networkd tendermint unsafe-reset-all --home $HOME/.realio-network --keep-addr-book
 SNAP_RPC="http://realio.srgts.xyz:37657"
 
 LATEST_HEIGHT=$(curl -s $SNAP_RPC/block | jq -r .result.block.header.height); \
