@@ -92,7 +92,6 @@ sudo journalctl -u defundd -f -o cat
 ````
 State Sync:
 ````
-# SRG0Z10 peer: 5b3dd55dade5bfa260d582a11af18ecb18e455b4@defund.srgts.xyz:23457
 sudo systemctl stop defundd
 cp $HOME/.defund/data/priv_validator_state.json $HOME/.defund/priv_validator_state.json.backup
 defundd tendermint unsafe-reset-all --home $HOME/.defund --keep-addr-book
