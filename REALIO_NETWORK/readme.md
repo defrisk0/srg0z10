@@ -48,6 +48,10 @@ Edit minimum-gas-prices parameter:
 ````
 sed -i 's|^minimum-gas-prices *=.*|minimum-gas-prices = "0.0001ario"|g' $HOME/.realio-network/config/app.toml
 ````
+Add addrbook:
+````
+curl -s https://raw.githubusercontent.com/defrisk0/srg0z10/main/REALIO_NETWORK/addrbook.json > $HOME/.realio-network/config/addrbook.json
+````
 Adding seeds and peers:
 ````
 seeds=""
