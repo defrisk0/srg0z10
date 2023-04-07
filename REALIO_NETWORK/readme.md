@@ -98,8 +98,11 @@ sudo journalctl -u realio-networkd -f -o cat
 State Sync:
 ````
 sudo systemctl stop realio-networkd
+
 cp $HOME/.realio-network/data/priv_validator_state.json $HOME/.realio-network/priv_validator_state.json.backup
+
 realio-networkd tendermint unsafe-reset-all --home $HOME/.realio-network --keep-addr-book
+
 SNAP_RPC="http://realio.srgts.xyz:37657"
 
 LATEST_HEIGHT=$(curl -s $SNAP_RPC/block | jq -r .result.block.header.height); \
@@ -114,5 +117,6 @@ s|^(trust_height[[:space:]]+=[[:space:]]+).*$|\1$BLOCK_HEIGHT| ; \
 s|^(trust_hash[[:space:]]+=[[:space:]]+).*$|\1\"$TRUST_HASH\"|" $HOME/.realio-network/config/config.toml
 
 mv $HOME/.realio-network/priv_validator_state.json.backup $HOME/.realio-network/data/priv_validator_state.json
+
 sudo systemctl restart realio-networkd && sudo journalctl -u realio-networkd -f -o cat
 ````
