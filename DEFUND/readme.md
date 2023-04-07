@@ -1,7 +1,7 @@
 # DEFUND
 [RPC](http://defund.srgts.xyz:23457) | [API](http://defund.srgts.xyz:3417) | [gRPC](http://defund.srgts.xyz:9340)
 
-et's update and install the necessary packages:
+Let's update and install the necessary packages:
 ````
 sudo apt update && sudo apt upgrade -y
 sudo apt install build-essential jq wget git htop curl screen bc -y
