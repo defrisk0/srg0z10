@@ -1,5 +1,4 @@
 # UPTICK
-[RPC](http://uptick.srgts.xyz:26657) | [API](http://uptick.srgts.xyz:1317) | [gRPC](http://uptick.srgts.xyz:9091)
 
 Let's update and install the necessary packages:
 ````
