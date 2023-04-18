@@ -62,7 +62,7 @@ Edit pruning parameter:
 sed -i 's|pruning = "default"|pruning = "custom"|g' $HOME/.cascadiad/config/app.toml
 sed -i 's|pruning-keep-recent = "0"|pruning-keep-recent = "100"|g' $HOME/.cascadiad/config/app.toml
 sed -i 's|pruning-interval = "0"|pruning-interval = "10"|g' $HOME/.cascadiad/config/app.toml
-sed -i 's|^snapshot-interval *=.*|snapshot-interval = 1000|g' $HOME/.cascadiad/config/app.toml
+sed -i 's|^snapshot-interval *=.*|snapshot-interval = 2000|g' $HOME/.cascadiad/config/app.toml
 ````
 Create a service file:
 ````
