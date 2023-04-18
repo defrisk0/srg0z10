@@ -1,6 +1,6 @@
 # CASCADIA
 
-[RPC](http://cascadia.srgts.xyz:25557) | [API](http://andromeda.srgts.xyz:3517) | [gRPC](http://andromeda.srgts.xyz:9551)
+[RPC](http://cascadia.srgts.xyz:25557) | [API](http://cascadia.srgts.xyz:3517) | [gRPC](http://cascadia.srgts.xyz:9551)
 
 Let's update and install the necessary packages:
 ````
