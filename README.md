@@ -17,10 +17,9 @@
 * [REALIO NETWORK](https://realio.fund/) - [MANUAL](https://github.com/defrisk0/srg0z10/tree/main/REALIO_NETWORK#realio-network) | [EXPLORER](https://explorer.k8s.stage.realio.fund/validators/realiovaloper1ympwj504np2jtsfeuv2yp798lz94w8xcfwphm5)
 ### PAUSE
 * [EMPOWER](https://empowerchain.io/) - [MANUAL](https://github.com/defrisk0/testnet_part/tree/main/EMPOWER#empower)
-* [SUI TESTNET (WAVE 1, WAVE 2)](https://sui.io/) - [MANUAL](https://github.com/defrisk0/testnet_part/tree/main/SUI#sui-testnet)
-* [SGE](https://sgenetwork.io/) - [MANUAL](https://github.com/defrisk0/srg0z10/tree/main/SGE#sge) | [EXPLORER](https://blockexplorer.testnet.sgenetwork.io/validators/sgevaloper127axpswd9tq73k6zgyj9752c889uwy3lckq5yn)
-* [HUMANS](https://humans.ai/) - [MANUAL](https://github.com/defrisk0/testnet_part/tree/main/HUMANS#humans) | [EXPLORER](https://explorer.humans.zone/humans-testnet/staking/humanvaloper1g3ueu32skaxsfz5ue3wtrsnd236m6spntavmkh)
 ### FINISHED
+* [SUI TESTNET (WAVE 1, WAVE 2)](https://sui.io/) - [MANUAL](https://github.com/defrisk0/testnet_part/tree/main/SUI#sui-testnet)
+* [HUMANS](https://humans.ai/) - [MANUAL](https://github.com/defrisk0/testnet_part/tree/main/HUMANS#humans)
 * [PALM TESTNET - BLAST API](https://palm.io/)
 * [FANTOM TESTNET - BLAST API](https://fantom.foundation/)
 * [DEWEB](https://deweb.services/)
