@@ -46,7 +46,7 @@ Description=PALM TESTNET NODE
 After=network-online.target
 [Service]
 User=$USER
-ExecStart=/root/besu-23.1.3/bin/besu --config-file=/root/palm-node/config.toml
+ExecStart=/root/besu-23.1.3/bin/besu --config-file=/root/palm-node/config.toml --sync-mode=FULL --random-peer-priority-enabled=true --rpc-http-enabled=true --rpc-http-api=ETH,NET,WEB3,ADMIN,IBFT,TXPOOL,DEBUG,TRACE --rpc-ws-api=ETH,NET,WEB3,ADMIN,IBFT,TXPOOL,DEBUG,TRACE --rpc-ws-enabled --rpc-http-host=0.0.0.0 --rpc-ws-host=0.0.0.0 --host-allowlist=* --metrics-enabled --metrics-host=0.0.0.0 --rpc-http-cors-origins=* --rpc-http-max-active-connections=10000 --rpc-ws-max-active-connections=10000 --max-peers=100
 Restart=on-failure
 RestartSec=10
 LimitNOFILE=65535
