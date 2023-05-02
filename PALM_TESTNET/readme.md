@@ -15,9 +15,7 @@ rm -rf besu-23.1.3.tar.gz
 Download the current genesis file:
 ````
 mkdir palm-node
-cd palm-node
-curl -O https://genesis-files.palm.io/uat/genesis.json
-cd $HOME
+curl -L https://genesis-files.palm.io/uat/genesis.json > $HOME/palm-node/genesis.json
 ````
 Create a configuration file:
 ````
