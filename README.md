@@ -20,8 +20,8 @@
 ### FINISHED
 * [SUI TESTNET (WAVE 1, WAVE 2)](https://sui.io/) - [MANUAL](https://github.com/defrisk0/testnet_part/tree/main/SUI#sui-testnet)
 * [HUMANS](https://humans.ai/) - [MANUAL](https://github.com/defrisk0/testnet_part/tree/main/HUMANS#humans)
-* [PALM TESTNET - BLAST API](https://palm.io/) - [MANUAL](https://github.com/defrisk0/srg0z10/tree/main/PALM_TESTNET#palm-testnet)
-* [FANTOM TESTNET - BLAST API](https://fantom.foundation/)
+* [PALM TESTNET (BLAST API)](https://palm.io/) - [MANUAL](https://github.com/defrisk0/srg0z10/tree/main/PALM_TESTNET#palm-testnet)
+* [FANTOM TESTNET (BLAST API)](https://fantom.foundation/)
 * [DEWEB](https://deweb.services/)
 * [UPTICK](https://uptick.network/) - [MANUAL](https://github.com/defrisk0/testnet_part/tree/main/UPTICK#uptick)
 * [NEUTRON](https://neutron.org/) - [MANUAL](https://github.com/defrisk0/testnet_part/tree/main/NEUTRON#neutron)
