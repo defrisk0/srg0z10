@@ -21,7 +21,8 @@ source $HOME/.bash_profile
 Install CLI:
 ````
 git clone https://github.com/cascadiafoundation/cascadia
-git checkout v0.1.1
+cd ~/cascadia
+git checkout v0.1.2
 make install
 ````
 Let's check the version (current as of April 2023 - v0.1.1 commit: 5f5bb104a13407a7312b9c5b780cbfd16d4bd6ef):
