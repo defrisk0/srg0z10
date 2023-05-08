@@ -25,7 +25,7 @@ cd ~/cascadia
 git checkout v0.1.2
 make install
 ````
-Let's check the version (current as of April 2023 - v0.1.1 commit: 5f5bb104a13407a7312b9c5b780cbfd16d4bd6ef):
+Let's check the version (current as of April 2023 - v0.1.1 commit: bde803072f5f52884a372c02d2249e743de9538d):
 ````
 cascadiad version --long
 ````
