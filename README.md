@@ -4,6 +4,7 @@
 * [FIRMACHAIN](https://firmachain.org/) - [EXPLORER](https://explorer.firmachain.dev/validators/firmavaloper15ynjhls568twd6treerrlqethcyuhnnek2jggd)
 * [RIZON](https://rizon.world/) - [EXPLORER](https://www.mintscan.io/rizon/validators/rizonvaloper1t39j0juzxq9r5x0pmhrqd5nh0vgeshdg5dwyl0)
 * [UPTICK](https://uptick.network/) - [EXPLORER](https://uptick.explorers.guru/validator/uptickvaloper1xk0zpxmxjgt27ujw50g79c4kzxdpx2pg0df7kk)
+* [GITOPIA](https://gitopia.com/)
 ## Testnet participation
 ### 2023
 * [CASCADIA](https://cascadia.foundation/) - [MANUAL](https://github.com/defrisk0/srg0z10/tree/main/CASCADIA#cascadia) | [EXPLORER](https://validator.cascadia.foundation/validators/cascadiavaloper1upy0vnzjmag50gcqmwrurt2a5p7psa36j4gaku)
@@ -16,7 +17,6 @@
 ### PAUSE
 * [EMPOWER](https://empowerchain.io/) - [MANUAL](https://github.com/defrisk0/testnet_part/tree/main/EMPOWER#empower)
 ### FINISHED
-* [GITOPIA](https://gitopia.com/)
 * [SUI TESTNET (WAVE 1, WAVE 2)](https://sui.io/) - [MANUAL](https://github.com/defrisk0/testnet_part/tree/main/SUI#sui-testnet)
 * [HUMANS](https://humans.ai/) - [MANUAL](https://github.com/defrisk0/testnet_part/tree/main/HUMANS#humans)
 * [PALM TESTNET (BLAST API)](https://palm.io/) - [MANUAL](https://github.com/defrisk0/srg0z10/tree/main/PALM_TESTNET#palm-testnet)
