@@ -1,10 +1,10 @@
 ## SRG0Z10
 [TELEGRAM](https://t.me/srg0z10) | [DISCORD](https://discord.com/users/SRG_TS#3469) | [EMAIL](mailto:sergpsy00@gmail.com) | [TWITTER](https://twitter.com/SergeyMSH) | [WEBSITE](https://srgts.xyz)
 ## Mainnet participation
-* [FIRMACHAIN](https://firmachain.org/) - [EXPLORER](https://explorer.firmachain.dev/validators/firmavaloper15ynjhls568twd6treerrlqethcyuhnnek2jggd)
+* [FIRMACHAIN (GENESIS VALIDATOR)](https://firmachain.org/) - [EXPLORER](https://explorer.firmachain.dev/validators/firmavaloper15ynjhls568twd6treerrlqethcyuhnnek2jggd)
 * [RIZON](https://rizon.world/) - [EXPLORER](https://www.mintscan.io/rizon/validators/rizonvaloper1t39j0juzxq9r5x0pmhrqd5nh0vgeshdg5dwyl0)
 * [UPTICK](https://uptick.network/) - [EXPLORER](https://uptick.explorers.guru/validator/uptickvaloper1xk0zpxmxjgt27ujw50g79c4kzxdpx2pg0df7kk)
-* [GITOPIA](https://gitopia.com/)
+* [GITOPIA (GENESIS VALIDATOR)](https://gitopia.com/) - [EXPLORER](https://explorer.stavr.tech/gitopia-m/staking/gitopiavaloper1zcy7h3cqsdhlcqqc03nynnvu7r7ys243jkd4ft)
 ## Testnet participation
 ### 2023
 * [CASCADIA](https://cascadia.foundation/) - [MANUAL](https://github.com/defrisk0/srg0z10/tree/main/CASCADIA#cascadia) | [EXPLORER](https://validator.cascadia.foundation/validators/cascadiavaloper1upy0vnzjmag50gcqmwrurt2a5p7psa36j4gaku)
