@@ -21,10 +21,10 @@ Install CLI:
 ````
 git clone https://github.com/lavanet/lava
 cd lava
-git checkout v0.11.2
+git checkout v0.12.1
 make install
 ````
-Let's check the version (current as of May 2023 - v0.11.2 commit: 3fcc37d8ae57b70c37f838239acfe71ced93b498):
+Let's check the version (current as of May 2023 - v0.12.1 commit: ee508e2b3338dac6baeaac9949e07156652dbf5b):
 ````
 lavad version --long
 ````
