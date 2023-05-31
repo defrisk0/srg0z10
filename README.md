@@ -5,6 +5,8 @@
 * [RIZON](https://rizon.world/) - [EXPLORER](https://www.mintscan.io/rizon/validators/rizonvaloper1t39j0juzxq9r5x0pmhrqd5nh0vgeshdg5dwyl0)
 * [UPTICK](https://uptick.network/) - [EXPLORER](https://uptick.explorers.guru/validator/uptickvaloper1xk0zpxmxjgt27ujw50g79c4kzxdpx2pg0df7kk)
 * [GITOPIA (GENESIS VALIDATOR)](https://gitopia.com/) - [EXPLORER](https://explorer.stavr.tech/gitopia-m/staking/gitopiavaloper1zcy7h3cqsdhlcqqc03nynnvu7r7ys243jkd4ft)
+* [BWARELABS (BLAST API - FANTON TESTNET)](https://bwarelabs.com/) - [EXPLORER](https://blastapi.io/explorer/0x5cf3967b719552a0644d7efe0bb980be38daaa18/1)
+* [BWARELABS (BLAST API - PALM TESTNET)](https://bwarelabs.com/) - [EXPLORER](https://blastapi.io/explorer/0x5cf3967b719552a0644d7efe0bb980be38daaa18/3)
 ## Testnet participation
 ### 2023
 * [CASCADIA](https://cascadia.foundation/) - [MANUAL](https://github.com/defrisk0/srg0z10/tree/main/CASCADIA#cascadia) | [EXPLORER](https://validator.cascadia.foundation/validators/cascadiavaloper1upy0vnzjmag50gcqmwrurt2a5p7psa36j4gaku)
