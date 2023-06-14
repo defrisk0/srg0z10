@@ -62,7 +62,7 @@ sed -i 's|^snapshot-interval *=.*|snapshot-interval = 2000|g' $HOME/.defund/conf
 ````
 Create a service file:
 ````
-sudo tee /etc/systemd/system/defund.service > /dev/null << EOF
+sudo tee /etc/systemd/system/defundd.service > /dev/null << EOF
 [Unit]
 Description=DEFUND NODE
 After=network-online.target
