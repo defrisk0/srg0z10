@@ -1,5 +1,4 @@
 # LAVA
-[RPC](http://lava.srgts.xyz:23357) | [API](http://lava.srgts.xyz:3317) | [gRPC](http://lava.srgts.xyz:9391)
 
 Let's update and install the necessary packages:
 ````
@@ -21,10 +20,10 @@ Install CLI:
 ````
 git clone https://github.com/lavanet/lava
 cd lava
-git checkout v0.13.1
+git checkout v0.14.0
 make install
 ````
-Let's check the version (current as of May 2023 - v0.13.1 commit: 9a045e99d3800316b204d0bc2cc40511a9e5ee85):
+Let's check the version (current as of June 2023 - v0.14.0 commit: e7416e866f76f09a82b0f34030ca624c6e8f5396):
 ````
 lavad version --long
 ````
@@ -39,7 +38,7 @@ Download the current genesis file:
 ````
 curl -s https://raw.githubusercontent.com/K433QLtr6RA9ExEq/GHFkqmTzpdNLDd6T/main/testnet-1/genesis_json/genesis.json > $HOME/.lava/config/genesis.json
 ````
-Let's check sum genesis file (current as of May 2023 - 72170a8a7314cb79bc57a60c1b920e26457769667ce5c2ff0595b342c0080d78):
+Let's check sum genesis file (current as of June 2023 - 72170a8a7314cb79bc57a60c1b920e26457769667ce5c2ff0595b342c0080d78):
 ````
 sha256sum $HOME/.lava/config/genesis.json
 ````
