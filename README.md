@@ -2,7 +2,6 @@
 [TELEGRAM](https://t.me/srg0z10) | [DISCORD](https://discord.com/users/SRG_TS#3469) | [EMAIL](mailto:sergpsy00@gmail.com) | [TWITTER](https://twitter.com/SergeyMSH) | [WEBSITE](https://srgts.xyz)
 ## Mainnet participation
 * [FIRMACHAIN (GENESIS VALIDATOR)](https://firmachain.org/) - [EXPLORER](https://explorer.firmachain.dev/validators/firmavaloper15ynjhls568twd6treerrlqethcyuhnnek2jggd)
-* [RIZON](https://rizon.world/) - [EXPLORER](https://www.mintscan.io/rizon/validators/rizonvaloper1t39j0juzxq9r5x0pmhrqd5nh0vgeshdg5dwyl0)
 * [UPTICK](https://uptick.network/) - [EXPLORER](https://uptick.explorers.guru/validator/uptickvaloper1xk0zpxmxjgt27ujw50g79c4kzxdpx2pg0df7kk)
 * [GITOPIA (GENESIS VALIDATOR)](https://gitopia.com/) - [EXPLORER](https://explorer.stavr.tech/gitopia-m/staking/gitopiavaloper1zcy7h3cqsdhlcqqc03nynnvu7r7ys243jkd4ft)
 * [BWARELABS (BLAST API - FANTON TESTNET)](https://bwarelabs.com/) - [EXPLORER](https://blastapi.io/explorer/0x5cf3967b719552a0644d7efe0bb980be38daaa18/1)
