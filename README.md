@@ -15,9 +15,9 @@
 * [HYPERSIGN](https://hypersign.id/) - [MANUAL](https://github.com/defrisk0/testnet_part/tree/main/HYPERSIGN#hypersign) | [EXPLORER](https://explorer.hypersign.id/hypersign-testnet/staking/hidvaloper1gukxu8ccyuwsfp2k72xamxqjuu89tul6yd8dmk)
 * [CROWD CONTROL](https://crowdcontrol.network/) - [EXPLORER](https://explorer.theamsolutions.info/cardchain-test/staking/ccvaloper1y4lg7qhx2yusxvekhwj8gzh2vu006kk0xtczmu)
 ### PAUSE
-* [EMPOWER](https://empowerchain.io/) - [MANUAL](https://github.com/defrisk0/testnet_part/tree/main/EMPOWER#empower)
 * [SEI NETWORK](https://seinetwork.io/)
 ### FINISHED
+* [EMPOWER](https://empowerchain.io/) - [MANUAL](https://github.com/defrisk0/testnet_part/tree/main/EMPOWER#empower)
 * [SUI TESTNET (WAVE 1, WAVE 2)](https://sui.io/) - [MANUAL](https://github.com/defrisk0/testnet_part/tree/main/SUI#sui-testnet)
 * [HUMANS](https://humans.ai/) - [MANUAL](https://github.com/defrisk0/testnet_part/tree/main/HUMANS#humans)
 * [PALM TESTNET (BLAST API)](https://palm.io/) - [MANUAL](https://github.com/defrisk0/srg0z10/tree/main/PALM_TESTNET#palm-testnet)
