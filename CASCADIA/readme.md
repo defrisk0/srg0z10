@@ -25,7 +25,7 @@ cd ~/cascadia
 git checkout v0.1.2
 make install
 ````
-Let's check the version (current as of April 2023 - v0.1.1 commit: bde803072f5f52884a372c02d2249e743de9538d):
+Let's check the version (current as of July 2023 - v0.1.1 commit: 36f56da7790251506d7c52d20a9fbc9979d74c17):
 ````
 cascadiad version --long
 ````
@@ -40,7 +40,7 @@ Download the current genesis file:
 ````
 curl -L https://anode.team/Cascadia/test/genesis.json > $HOME/.cascadiad/config/genesis.json
 ````
-Let's check sum genesis file (current as of April 2023 - 74ea3c84182028300d0c101c5cf017a055782c595ed91e4be3638380f0169582):
+Let's check sum genesis file (current as of July 2023 - 74ea3c84182028300d0c101c5cf017a055782c595ed91e4be3638380f0169582):
 ````
 sha256sum $HOME/.cascadiad/config/genesis.json
 ````
