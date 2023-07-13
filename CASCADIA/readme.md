@@ -22,7 +22,7 @@ Install CLI:
 ````
 git clone https://github.com/cascadiafoundation/cascadia
 cd ~/cascadia
-git checkout v0.1.2
+git checkout v0.1.3
 make install
 ````
 Let's check the version (current as of July 2023 - v0.1.1 commit: 36f56da7790251506d7c52d20a9fbc9979d74c17):
