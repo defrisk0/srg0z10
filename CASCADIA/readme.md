@@ -51,7 +51,7 @@ sed -i 's|^minimum-gas-prices *=.*|minimum-gas-prices = "0.01aCC"|g' $HOME/.casc
 Adding seeds and peers:
 ````
 seeds=""
-peers="275dc82c6fbea56c9c0b5098d5156a939a8698a0@178.63.102.172:25556,1d61222b7b8e180aacebfd57fbd2d8ab95ebdc4c@65.109.93.152:35656,"
+peers="275dc82c6fbea56c9c0b5098d5156a939a8698a0@178.63.102.172:25556,1d61222b7b8e180aacebfd57fbd2d8ab95ebdc4c@65.109.93.152:35656"
 sed -i -e 's|^seeds *=.*|seeds = "'$seeds'"|; s|^persistent_peers *=.*|persistent_peers = "'$peers'"|' $HOME/.cascadiad/config/config.toml
 ````
 Add addrbook:
