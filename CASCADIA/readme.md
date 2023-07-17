@@ -1,6 +1,6 @@
 # CASCADIA
 
-[RPC](http://cascadia.srgts.xyz:25557) | [API](http://cascadia.srgts.xyz:3517) | [gRPC](http://cascadia.srgts.xyz:9551)
+[RPC](http://cascadia.srgts.xyz:21457) | [API](http://cascadia.srgts.xyz:1417) | [gRPC](http://cascadia.srgts.xyz:9491)
 
 Let's update and install the necessary packages:
 ````
@@ -100,7 +100,7 @@ State Sync:
 sudo systemctl stop cascadiad
 cp $HOME/.cascadiad/data/priv_validator_state.json $HOME/.cascadiad/priv_validator_state.json.backup
 cascadiad tendermint unsafe-reset-all --home $HOME/.cascadiad --keep-addr-book
-SNAP_RPC="http://cascadia.srgts.xyz:25557"
+SNAP_RPC="http://cascadia.srgts.xyz:21457"
 
 LATEST_HEIGHT=$(curl -s $SNAP_RPC/block | jq -r .result.block.header.height); \
 BLOCK_HEIGHT=$((LATEST_HEIGHT - 2000)); \
