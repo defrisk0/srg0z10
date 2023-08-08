@@ -1,5 +1,5 @@
 ## SRG0Z10
-[TELEGRAM](https://t.me/srg0z10) | [DISCORD](https://discord.com/users/SRG_TS#3469) | [EMAIL](mailto:sergpsy00@gmail.com) | [TWITTER](https://twitter.com/SergeyMSH) | [WEBSITE](https://srgts.xyz)
+[TELEGRAM](https://t.me/srg0z10) | [DISCORD](https://discord.com/users/srg0z10) | [EMAIL](mailto:sergpsy00@gmail.com) | [TWITTER](https://twitter.com/SergeyMSH) | [WEBSITE](https://srgts.xyz)
 ## Mainnet participation
 * [FIRMACHAIN (GENESIS VALIDATOR)](https://firmachain.org/) - [EXPLORER](https://explorer.firmachain.dev/validators/firmavaloper15ynjhls568twd6treerrlqethcyuhnnek2jggd)
 * [UPTICK](https://uptick.network/) - [EXPLORER](https://uptick.explorers.guru/validator/uptickvaloper1xk0zpxmxjgt27ujw50g79c4kzxdpx2pg0df7kk)
