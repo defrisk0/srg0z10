@@ -22,10 +22,10 @@ Install CLI:
 ````
 git clone https://github.com/cascadiafoundation/cascadia
 cd ~/cascadia
-git checkout v0.1.4
+git checkout v0.1.5
 make install
 ````
-Let's check the version (current as of August 2023 - v0.1.4 commit: b794758c07ab77669877e9a11aa8dd14f4372657):
+Let's check the version (current as of September 2023 - v0.1.5 commit: 3e834a69b0c477daa00b95f9331f6b06c5fd3472):
 ````
 cascadiad version --long
 ````
@@ -40,7 +40,7 @@ Download the current genesis file:
 ````
 curl -L https://anode.team/Cascadia/test/genesis.json > $HOME/.cascadiad/config/genesis.json
 ````
-Let's check sum genesis file (current as of August 2023 - 74ea3c84182028300d0c101c5cf017a055782c595ed91e4be3638380f0169582):
+Let's check sum genesis file (current as of September 2023 - 74ea3c84182028300d0c101c5cf017a055782c595ed91e4be3638380f0169582):
 ````
 sha256sum $HOME/.cascadiad/config/genesis.json
 ````
@@ -73,7 +73,7 @@ Description=CASCADIA NODE
 After=network-online.target
 [Service]
 User=$USER
-ExecStart=$(which cascadiad) start
+ExecStart=$(which cascadiad) start --chain-id cascadia_6102-1
 Restart=on-failure
 RestartSec=10
 LimitNOFILE=65535
