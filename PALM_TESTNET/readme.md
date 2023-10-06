@@ -65,3 +65,11 @@ Checking the logs
 ````
 sudo journalctl -u palmd -f -o cat
 ````
+Performance checks (OK):
+````
+http://IP_SERVER:8545/health
+````
+Fantom Testnet Blockchain Explorer:
+````
+https://testnet.ftmscan.com/
+````
