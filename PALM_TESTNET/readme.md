@@ -18,7 +18,7 @@ source $HOME/.bash_profile
 ````
 Download the current genesis file:
 ````
-mkdir $HOME/.palm-node && cd $HOME/.palm-node
+mkdir $HOME/.palm-node
 curl -L https://raw.githubusercontent.com/gateway-fm/polygon-edge/palm-migration/genesis-testnet.json > $HOME/.palm-node/genesis.json
 ````
 Install Polygon-Edge:
