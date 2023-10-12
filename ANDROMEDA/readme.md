@@ -1,5 +1,4 @@
 # ANDROMEDA
-[RPC](http://andromeda.srgts.xyz:26657) | [API](http://andromeda.srgts.xyz:1317) | [gRPC](http://andromeda.srgts.xyz:9091)
 
 Let's update and install the necessary packages:
 ````
