@@ -22,10 +22,10 @@ Install CLI:
 ````
 git clone https://github.com/cascadiafoundation/cascadia
 cd ~/cascadia
-git checkout v0.1.5
+git checkout v0.1.6
 make install
 ````
-Let's check the version (current as of September 2023 - v0.1.5 commit: 3e834a69b0c477daa00b95f9331f6b06c5fd3472):
+Let's check the version (current as of October 2023 - v0.1.6 commit: 06ad7b0222b3d7795c25173231fb8b90ad79cdbf):
 ````
 cascadiad version --long
 ````
@@ -40,7 +40,7 @@ Download the current genesis file:
 ````
 curl -L https://anode.team/Cascadia/test/genesis.json > $HOME/.cascadiad/config/genesis.json
 ````
-Let's check sum genesis file (current as of September 2023 - 74ea3c84182028300d0c101c5cf017a055782c595ed91e4be3638380f0169582):
+Let's check sum genesis file (current as of October 2023 - 74ea3c84182028300d0c101c5cf017a055782c595ed91e4be3638380f0169582):
 ````
 sha256sum $HOME/.cascadiad/config/genesis.json
 ````
@@ -51,7 +51,7 @@ sed -i 's|^minimum-gas-prices *=.*|minimum-gas-prices = "0.01aCC"|g' $HOME/.casc
 Adding seeds and peers:
 ````
 seeds=""
-peers="275dc82c6fbea56c9c0b5098d5156a939a8698a0@178.63.102.172:25556,1d61222b7b8e180aacebfd57fbd2d8ab95ebdc4c@65.109.93.152:35656"
+peers="001933f36a6ec7c45b3c4cef073d0372daa5344d@194.163.155.84:49656,5530b2b41f983580a8e0ea83feb0e8eb732ef2d8@65.109.101.53:17856,21ca2712116138429aed3d72422379397c53fa86@65.109.65.248:34656,e25bf22448e62faca2359985303ec4557f662444@95.217.11.20:26656,b71287a85b70df75e1405c6831634738e6b957ab@65.108.72.253:15656,3afe6df94dc385efa85aef823e038c76147e4c99@95.217.35.111:26656,1d61222b7b8e180aacebfd57fbd2d8ab95ebdc4c@65.109.93.152:35656,c9256e4f42a23bbdc9ea79805f497a1923a4beac@65.108.230.113:17096,e85f72848ba9586c6704445d1118fb35e2ca5804@65.109.84.33:38656,df3cd1c84b2caa56f044ac19cf0267a44f2e87da@57.128.108.220:26656"
 sed -i -e 's|^seeds *=.*|seeds = "'$seeds'"|; s|^persistent_peers *=.*|persistent_peers = "'$peers'"|' $HOME/.cascadiad/config/config.toml
 ````
 Add addrbook:
