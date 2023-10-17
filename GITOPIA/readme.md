@@ -94,8 +94,7 @@ Checking the logs
 ````
 sudo journalctl -u gitopiad -f -o cat
 ````
-### <a id="title1">State Sync</a>
-State Sync:
+### <a> id="title1">State Sync</a>
 ````
 sudo systemctl stop gitopiad
 cp $HOME/.gitopia/data/priv_validator_state.json $HOME/.gitopia/priv_validator_state.json.backup
