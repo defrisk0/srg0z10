@@ -1,5 +1,5 @@
 # GITOPIA
-[RPC](http://gitopia.srgts.xyz:41117) | [API](http://hypersign.srgts.xyz:4117) | [STATESYNC](http://hypersign.srgts.xyz:4117) 
+[RPC](http://gitopia.srgts.xyz:41117) | [API](http://hypersign.srgts.xyz:4117) | [STATESYNC](https://github.com/defrisk0/srg0z10/tree/main/GITOPIA#:~:text=f%20%2Do%20cat-,State%20Sync%3A,-sudo%20systemctl%20stop) 
 
 Let's update and install the necessary packages:
 ````
