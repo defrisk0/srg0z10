@@ -1,5 +1,5 @@
 # GITOPIA
-[RPC](http://gitopia.srgts.xyz:41117) | [API](http://hypersign.srgts.xyz:4117) | [STATESYNC](#title1) 
+[RPC](http://gitopia.srgts.xyz:41117) | [API](http://gitopia.srgts.xyz:4117) | [STATESYNC](#title1) 
 
 Let's update and install the necessary packages:
 ````
