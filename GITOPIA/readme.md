@@ -54,7 +54,7 @@ sed -i 's|^minimum-gas-prices *=.*|minimum-gas-prices = "0.0001ulore"|g' $HOME/.
 Adding seeds and peers:
 ````
 seeds="a4a69a62de7cb0feb96c239405aa247a5a258739@seeds.cros-nest.com:57656,ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:11356"
-peers="082e95b5d5351e68dcfb24dff802f9064cfd5a4c@65.109.92.241:51056,d1135f9f8e71c606a0f7a01c445550b836d0ec79@65.109.157.219:28656,a2d725392ea4cb4d596555bb6e56a073d140037b@194.163.171.231:26656,901c393d17c1e6094cbbc83c34f167a67bb5fab1@65.108.70.119:36656,112e976f58198f8da593fe4134bddd92cd0fbf55@65.21.192.90:26656"
+peers="082e95b5d5351e68dcfb24dff802f9064cfd5a4c@65.109.92.241:51056,d1135f9f8e71c606a0f7a01c445550b836d0ec79@65.109.157.219:28656,a2d725392ea4cb4d596555bb6e56a073d140037b@194.163.171.231:26656,901c393d17c1e6094cbbc83c34f167a67bb5fab1@65.108.70.119:36656,112e976f58198f8da593fe4134bddd92cd0fbf55@65.21.192.90:26656,5c20952d6ecd4ec0b674bf9dd9040eb3da1d2193@gitopia.srgts.xyz:41116"
 sed -i -e 's|^seeds *=.*|seeds = "'$seeds'"|; s|^persistent_peers *=.*|persistent_peers = "'$peers'"|' $HOME/.gitopia/config/config.toml
 ````
 Edit pruning parameter:
