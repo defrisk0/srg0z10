@@ -1,5 +1,5 @@
 # GITOPIA
-[RPC](http://gitopia.srgts.xyz:41117) | [API](http://hypersign.srgts.xyz:4117) | [STATESYNC](https://github.com/defrisk0/srg0z10/tree/main/GITOPIA#:~:text=f%20%2Do%20cat-,State%20Sync%3A,-sudo%20systemctl%20stop) 
+[RPC](http://gitopia.srgts.xyz:41117) | [API](http://hypersign.srgts.xyz:4117) | [STATESYNC](#title1) 
 
 Let's update and install the necessary packages:
 ````
@@ -94,6 +94,7 @@ Checking the logs
 ````
 sudo journalctl -u gitopiad -f -o cat
 ````
+### <a id="title1">State Sync</a>
 State Sync:
 ````
 sudo systemctl stop gitopiad
