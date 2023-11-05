@@ -18,38 +18,39 @@ source $HOME/.bash_profile
 ````
 Install CLI:
 ````
+cd $HOME
 git clone https://github.com/UptickNetwork/uptick.git
 cd uptick
-git checkout v0.2.6
+git checkout v0.2.11
 make install
 ````
-Let's check the version (current as of February 2023 - v0.2.6 commit: 16a24a10731b975966efc2a7674980610dce2759):
+Let's check the version (current as of November 2023 - v0.2.11 commit: a67f8c973f0b4068493b5063a3f99fa8816558cf):
 ````
 uptickd version --long
 ````
-Set the correct chain (uptick_7000-2), chooses his moniker and initialize node:
+Set the correct chain (uptick_117-1), chooses his moniker and initialize node:
 ````
 cd $HOME
-MNK=test
-uptickd config chain-id uptick_7000-2
-uptickd init $MNK --chain-id uptick_7000-2
+MNK=main
+uptickd config chain-id uptick_117-1
+uptickd init $MNK --chain-id uptick_117-1
 ````
 Download the current genesis file:
 ````
-curl https://raw.githubusercontent.com/UptickNetwork/uptick-testnet/main/uptick_7000-2/genesis.json > $HOME/.uptickd/config/genesis.json
+curl -s https://raw.githubusercontent.com/UptickNetwork/uptick-mainnet/master/uptick_117-1/genesis.json > $HOME/.uptickd/config/genesis.json
 ````
-Let's check sum genesis file (current as of February 2023 - f96764c7ae1bc713b2acc87b5320f2d10ee26716b3daa6cc455cb3a3906f05c2):
+Let's check sum genesis file (current as of November 2023 - df80462fed795d877fb1e372175ec66d004056fa0ec98c6c3ed52a6715efc66f):
 ````
 sha256sum $HOME/.uptickd/config/genesis.json
 ````
 Edit minimum-gas-prices parameter:
 ````
-sed -i 's|^minimum-gas-prices *=.*|minimum-gas-prices = "0.0001auptick"|g' $HOME/.uptickd/config/app.toml
+sed -i 's|^minimum-gas-prices *=.*|minimum-gas-prices = "0.001auptick"|g' $HOME/.uptickd/config/app.toml
 ````
 Adding seeds and peers:
 ````
 seeds=""
-peers="eecdfb17919e59f36e5ae6cec2c98eeeac05c0f2@peer0.testnet.uptick.network:26656"
+peers="801a902be000e23d437a50f9d86379c82b6342c5@18.119.187.129:26656,5bdf35176e5eda32ec718bd62b039786292a7f7c@65.109.159.69:28656,14ca9d73314dd519bc0b0be8511c88f85fe6873e@46.4.81.204:17656,ef9af846dcb2d25e7ccf5f7975a6d5d51fa01477@5.9.138.213:26656,f05733da50967e3955e11665b1901d36291dfaee@65.108.195.30:21656"
 sed -i -e 's|^seeds *=.*|seeds = "'$seeds'"|; s|^persistent_peers *=.*|persistent_peers = "'$peers'"|' $HOME/.uptickd/config/config.toml
 ````
 Edit pruning parameter:
