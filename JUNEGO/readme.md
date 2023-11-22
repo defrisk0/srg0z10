@@ -27,7 +27,7 @@ Description=JUNEGO NODE
 After=network-online.target
 [Service]
 User=$USER
-ExecStart=$(which juneogo) --config-file="$HOME/.juneogo/config.json" --data-dir="$HOME/.juneogo/"
+ExecStart=$(which juneogo) --config-file="$HOME/.juneogo/config.json" --data-dir="$HOME/.juneogo/" --http-host="0.0.0.0"
 Restart=on-failure
 RestartSec=10
 LimitNOFILE=65535
