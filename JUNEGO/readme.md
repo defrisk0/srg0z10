@@ -45,3 +45,12 @@ Checking the logs
 ````
 sudo journalctl -u juneogo -f -o cat
 ````
+Verify that the node is operational ({"jsonrpc":"2.0","result":{"isBootstrapped":true},"id":1}):
+````
+curl -X POST --data '{"jsonrpc":"2.0", "id":1,"method" :"info.isBootstrapped","params": {"chain":"JUNE"}}' -H 'content-type:application/json;' 127.0.0.1:9650/ext/info
+````
+Get the value of nodeID:
+````
+curl -X POST --data '{"jsonrpc":"2.0","id":1,"method" :"info.getNodeID"}' -H 'content-type:application/json' 127.0.0.1:9650/ext/info
+````
+The answer will look like this: {"jsonrpc":"2.0","result":{"nodeID":"NodeID-9xnL72yF86mb4obDvu99ENA4GfzcvEhMy","nodePOP":{"publicKey":"0xad...45"}},"id":1} where 0xad...45 is your nodeID.
