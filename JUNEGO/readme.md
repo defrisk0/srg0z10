@@ -53,4 +53,4 @@ Get the value of nodeID:
 ````
 curl -X POST --data '{"jsonrpc":"2.0","id":1,"method" :"info.getNodeID"}' -H 'content-type:application/json' 127.0.0.1:9650/ext/info
 ````
-The answer will look like this: {"jsonrpc":"2.0","result":{"nodeID":"NodeID-9xnL72yF86mb4obDvu99ENA4GfzcvEhMy","nodePOP":{"publicKey":"0xad...45"}},"id":1} where 0xad...45 is your nodeID.
+The answer will look like this: {"jsonrpc":"2.0","result":{"nodeID":"NodeID-9xnL72yF86mb4obDvu99ENA4GfzcvEhMy","nodePOP":{"publicKey":"0xad...45"}},"id":1} where NodeID-9...EhMy is your nodeID.
