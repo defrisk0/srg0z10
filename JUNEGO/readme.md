@@ -49,8 +49,15 @@ Verify that the node is operational ({"jsonrpc":"2.0","result":{"isBootstrapped"
 ````
 curl -X POST --data '{"jsonrpc":"2.0", "id":1,"method" :"info.isBootstrapped","params": {"chain":"JUNE"}}' -H 'content-type:application/json;' 127.0.0.1:9650/ext/info
 ````
-Get the value of nodeID:
+Get the value of nodeID ({"jsonrpc":"2.0","result":{"nodeID":"NodeID-9xnL72yF86mb4obDvu99ENA4GfzcvEhMy","nodePOP":{"publicKey":"0xad...45"}},"id":1} where NodeID-9...EhMy is your nodeID):
 ````
 curl -X POST --data '{"jsonrpc":"2.0","id":1,"method" :"info.getNodeID"}' -H 'content-type:application/json' 127.0.0.1:9650/ext/info
 ````
-The answer will look like this: {"jsonrpc":"2.0","result":{"nodeID":"NodeID-9xnL72yF86mb4obDvu99ENA4GfzcvEhMy","nodePOP":{"publicKey":"0xad...45"}},"id":1} where NodeID-9...EhMy is your nodeID.
+Get a description of peer-to-peer connections:
+````
+curl -X POST --data '{"jsonrpc":"2.0", "id":1,"method" :"info.peers","params": {"chain":"JUNE"}}' -H 'content-type:application/json;' 127.0.0.1:9650/ext/info
+````
+Check the validator uptime:
+````
+curl -X POST --data '{"jsonrpc":"2.0", "id":1,"method" :"info.uptime","params": {"chain":"JUNE"}}' -H 'content-type:application/json;' 127.0.0.1:9650/ext/info
+````
