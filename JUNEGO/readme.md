@@ -116,5 +116,5 @@ nano $HOME/.juneogo/config.json
 ````
 Restart the node:
 ````
-sudo systemctl restart juneog
+sudo systemctl restart juneogo
 ````
