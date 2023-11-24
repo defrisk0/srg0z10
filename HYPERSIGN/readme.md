@@ -1,5 +1,5 @@
 # HYPERSIGN
-[RPC](http://hypersign.srgts.xyz:41657) | [API](http://hypersign.srgts.xyz:4117) | [gRPC](http://hypersign.srgts.xyz:4190)
+[RPC](http://hypersign.srgts.xyz:26657) | [API](http://hypersign.srgts.xyz:1317) | [gRPC](http://hypersign.srgts.xyz:9090)
 
 Let's update and install the necessary packages:
 ````
@@ -94,7 +94,7 @@ State Sync:
 sudo systemctl stop hid-noded
 cp $HOME/.hid-node/data/priv_validator_state.json $HOME/.hid-node/priv_validator_state.json.backup
 hid-noded tendermint unsafe-reset-all --home $HOME/.hid-node --keep-addr-book
-SNAP_RPC="http://hypersign.srgts.xyz:41657"
+SNAP_RPC="http://hypersign.srgts.xyz:26657"
 
 LATEST_HEIGHT=$(curl -s $SNAP_RPC/block | jq -r .result.block.header.height); \
 BLOCK_HEIGHT=$((LATEST_HEIGHT - 2000)); \
