@@ -1,7 +1,5 @@
 # CASCADIA
 
-[RPC](http://cascadia.srgts.xyz:21457) | [API](http://cascadia.srgts.xyz:1417) | [gRPC](http://cascadia.srgts.xyz:9491)
-
 Let's update and install the necessary packages:
 ````
 sudo apt update && sudo apt upgrade -y
@@ -22,25 +20,25 @@ Install CLI:
 ````
 git clone https://github.com/cascadiafoundation/cascadia
 cd ~/cascadia
-git checkout v0.1.6
+git checkout v0.1.9-1
 make install
 ````
-Let's check the version (current as of October 2023 - v0.1.6 commit: 06ad7b0222b3d7795c25173231fb8b90ad79cdbf):
+Let's check the version (current as of December 2023 - v0.1.9-1 commit: 1ff47d96d12d272fbb2330e601a6a0642b8d9f16):
 ````
 cascadiad version --long
 ````
-Set the correct chain (cascadia_6102-1), chooses his moniker and initialize node:
+Set the correct chain (cascadia_11029-1), chooses his moniker and initialize node:
 ````
 cd $HOME
-MNK=testnet
-cascadiad config chain-id cascadia_6102-1
-cascadiad init $MNK --chain-id cascadia_6102-1
+MNK=CSD_NODE
+cascadiad config chain-id cascadia_11029-1
+cascadiad init $MNK --chain-id cascadia_11029-1
 ````
 Download the current genesis file:
 ````
-curl -L https://anode.team/Cascadia/test/genesis.json > $HOME/.cascadiad/config/genesis.json
+curl https://rpc.cascadia.foundation/genesis | jq '.result.genesis' > ~/.cascadiad/config/genesis.json
 ````
-Let's check sum genesis file (current as of October 2023 - 74ea3c84182028300d0c101c5cf017a055782c595ed91e4be3638380f0169582):
+Let's check sum genesis file (current as of December 2023 - 704386b37748baf8c6a0e1ae2f16806fb24d165e69caabc95dfde6fdee0d5a9e):
 ````
 sha256sum $HOME/.cascadiad/config/genesis.json
 ````
@@ -51,12 +49,8 @@ sed -i 's|^minimum-gas-prices *=.*|minimum-gas-prices = "0.01aCC"|g' $HOME/.casc
 Adding seeds and peers:
 ````
 seeds=""
-peers="001933f36a6ec7c45b3c4cef073d0372daa5344d@194.163.155.84:49656,5530b2b41f983580a8e0ea83feb0e8eb732ef2d8@65.109.101.53:17856,21ca2712116138429aed3d72422379397c53fa86@65.109.65.248:34656,e25bf22448e62faca2359985303ec4557f662444@95.217.11.20:26656,b71287a85b70df75e1405c6831634738e6b957ab@65.108.72.253:15656,3afe6df94dc385efa85aef823e038c76147e4c99@95.217.35.111:26656,1d61222b7b8e180aacebfd57fbd2d8ab95ebdc4c@65.109.93.152:35656,c9256e4f42a23bbdc9ea79805f497a1923a4beac@65.108.230.113:17096,e85f72848ba9586c6704445d1118fb35e2ca5804@65.109.84.33:38656,df3cd1c84b2caa56f044ac19cf0267a44f2e87da@57.128.108.220:26656"
+peers="d1ed80e232fc2f3742637daacab454e345bbe475@54.204.246.120:26656,0c96a6c328eb58d1467afff4130ab446c294108c@34.239.67.55:26656"
 sed -i -e 's|^seeds *=.*|seeds = "'$seeds'"|; s|^persistent_peers *=.*|persistent_peers = "'$peers'"|' $HOME/.cascadiad/config/config.toml
-````
-Add addrbook:
-````
-curl -s https://raw.githubusercontent.com/defrisk0/srg0z10/main/CASCADIA/addrbook.json > $HOME/.cascadiad/config/addrbook.json
 ````
 Edit pruning parameter:
 ````
@@ -73,7 +67,7 @@ Description=CASCADIA NODE
 After=network-online.target
 [Service]
 User=$USER
-ExecStart=$(which cascadiad) start --chain-id cascadia_6102-1
+ExecStart=$(which cascadiad) start --chain-id cascadia_11029-1
 Restart=on-failure
 RestartSec=10
 LimitNOFILE=65535
@@ -100,7 +94,7 @@ State Sync:
 sudo systemctl stop cascadiad
 cp $HOME/.cascadiad/data/priv_validator_state.json $HOME/.cascadiad/priv_validator_state.json.backup
 cascadiad tendermint unsafe-reset-all --home $HOME/.cascadiad --keep-addr-book
-SNAP_RPC="http://cascadia.srgts.xyz:21457"
+SNAP_RPC=https://rpc.cascadia.foundation:443"
 
 LATEST_HEIGHT=$(curl -s $SNAP_RPC/block | jq -r .result.block.header.height); \
 BLOCK_HEIGHT=$((LATEST_HEIGHT - 2000)); \
