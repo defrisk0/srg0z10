@@ -9,7 +9,7 @@ sudo apt install build-essential jq wget git htop curl screen bc -y
 Install Go:
 ````
 cd $HOME
-VRS="1.19.2"
+VRS="1.21.5"
 wget "https://golang.org/dl/go$VRS.linux-amd64.tar.gz"
 sudo rm -rf /usr/local/go
 sudo tar -C /usr/local -xzf "go$VRS.linux-amd64.tar.gz"
@@ -21,18 +21,18 @@ Install CLI:
 ````
 git clone https://github.com/hypersign-protocol/hid-node.git
 cd hid-node
-git checkout v0.1.10
+git checkout v0.2.0
 make install
 ````
-Let's check the version (current as of August 2023 - v0.1.10 commit: 52012b4):
+Let's check the version (current as of December 2023 - v0.2.0 commit: 583b9fd):
 ````
 hid-noded version --long
 ````
-Set the correct chain (jagrat), chooses his moniker and initialize node:
+Set the correct chain (prajna-1), chooses his moniker and initialize node:
 ````
 cd $HOME
 MNK=test
-hid-noded init $MNK --chain-id jagrat
+hid-noded init $MNK --chain-id prajna-1
 ````
 Download the current genesis file:
 ````
