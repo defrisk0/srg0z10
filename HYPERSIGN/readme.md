@@ -38,7 +38,7 @@ Download the current genesis file:
 ````
 curl -s https://raw.githubusercontent.com/hypersign-protocol/networks/master/testnet/prajna/final_genesis.json > $HOME/.hid-node/config/genesis.json
 ````
-Let's check sum genesis file (current as of December 2023 - 396d19f73ab95638b9d315418866f2c4ed11378f6feef4d625dcb5b1d06546e8):
+Let's check sum genesis file (current as of December 2023 - 40ef72dad62987429ab813dac1d5d2bd0f1b680eaedce07fdea0972beece6d81):
 ````
 sha256sum $HOME/.hid-node/config/genesis.json
 ````
