@@ -28,7 +28,7 @@ avalanchego --version
 ````
 Create a service file:
 ````
-sudo tee /etc/systemd/system/andromedad.service > /dev/null << EOF
+sudo tee /etc/systemd/system/avalanchego.service > /dev/null << EOF
 [Unit]
 Description=AVALANCHE NODE
 After=network-online.target
