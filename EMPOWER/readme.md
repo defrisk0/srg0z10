@@ -20,10 +20,10 @@ Install CLI:
 ````
 git clone https://github.com/EmpowerPlastic/empowerchain
 cd empowerchain/chain
-git checkout v1.0.0
+git checkout v2.0.0
 make install
 ````
-Let's check the version (current as of August 2023 - v0.0.1 commit: 01b8bd1c9182ad0033ecadb2667a0de4cdc80c9a):
+Let's check the version (current as of December 2023 - v2.0.0 commit: 70ad47fc878d1854fe279ebf99e3a9260b78099c):
 ````
 empowerd version --long
 ````
@@ -38,7 +38,7 @@ Download the current genesis file:
 ````
 curl -L https://github.com/EmpowerPlastic/empowerchain/raw/main/mainnet/empowerchain-1/genesis.tar.gz | tar -xz -C $HOME/.empowerchain/config/
 ````
-Let's check sum genesis file (current as of August 2023 - 819d33d14c35bbfbc5997db9bf545eb7a5504b5870a307ce90c3813add4b316b):
+Let's check sum genesis file (current as of December 2023 - 819d33d14c35bbfbc5997db9bf545eb7a5504b5870a307ce90c3813add4b316b):
 ````
 sha256sum $HOME/.empowerchain/config/genesis.json
 ````
