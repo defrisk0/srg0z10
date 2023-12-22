@@ -20,10 +20,10 @@ Install CLI:
 ````
 git clone https://github.com/cascadiafoundation/cascadia
 cd ~/cascadia
-git checkout v0.1.9-1
+git checkout v0.2.0
 make install
 ````
-Let's check the version (current as of December 2023 - v0.1.9-1 commit: 1ff47d96d12d272fbb2330e601a6a0642b8d9f16):
+Let's check the version (current as of December 2023 - v0.2.0 commit: 983ccf1644acb89d1cf6f81a9238a5f7422620da):
 ````
 cascadiad version --long
 ````
