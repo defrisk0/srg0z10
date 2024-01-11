@@ -87,7 +87,7 @@ Checking the logs
 ````
 sudo journalctl -u artelad -f -o cat
 ````
-State Sync:
+### <a id="title1">State Sync</a>
 ````
 sudo systemctl stop artelad
 cp $HOME/.artelad/data/priv_validator_state.json $HOME/.artelad/priv_validator_state.json.backup
