@@ -94,7 +94,7 @@ Snapshot:
 sudo systemctl stop cascadiad
 cp $HOME/.cascadiad/data/priv_validator_state.json $HOME/.cascadiad/priv_validator_state.json.backup
 cascadiad tendermint unsafe-reset-all --home $HOME/.cascadiad --keep-addr-book
-curl http://snapshot.cascadia.foundation/cascadia_11029-1_2024-01-11.tar.lz4 | lz4 -dc - | tar -xf - -C $HOME/.cascadiad
+curl https://snapshot.cascadia.foundation/cascadia_11029-1_2024-01-11.tar.lz4 | lz4 -dc - | tar -xf - -C $HOME/.cascadiad
 mv $HOME/.cascadiad/priv_validator_state.json.backup $HOME/.cascadiad/data/priv_validator_state.json
 sudo systemctl restart cascadiad && sudo journalctl -u cascadiad -f -o cat
 ````
