@@ -36,7 +36,7 @@ artelad init $MNK --chain-id artela_11822-1
 ````
 Download the current genesis file:
 ````
-
+curl -L https://raw.githubusercontent.com/defrisk0/srg0z10/main/ARTELA/genesis.json > $HOME/.artelad/config/genesis.json
 ````
 Let's check sum genesis file (current as of January 2024 - 9cc7d80f29b42a2b6658ee867608dd75cead81cac22e4ed9f830de3554b10438):
 ````
@@ -44,7 +44,7 @@ sha256sum $HOME/.artelad/config/genesis.json
 ````
 Download the current addrbook:
 ````
-
+curl -L https://raw.githubusercontent.com/defrisk0/srg0z10/main/ARTELA/addrbook.json > $HOME/.artelad/config/addrbook.json
 ````
 Edit minimum-gas-prices parameter:
 ````
@@ -87,4 +87,24 @@ Checking the logs
 ````
 sudo journalctl -u artelad -f -o cat
 ````
+State Sync:
+````
+sudo systemctl stop artelad
+cp $HOME/.artelad/data/priv_validator_state.json $HOME/.artelad/priv_validator_state.json.backup
+artelad tendermint unsafe-reset-all --home $HOME/.artelad --keep-addr-book
+SNAP_RPC=http://95.216.35.51:22357
 
+LATEST_HEIGHT=$(curl -s $SNAP_RPC/block | jq -r .result.block.header.height); \
+BLOCK_HEIGHT=$((LATEST_HEIGHT - 2000)); \
+TRUST_HASH=$(curl -s "$SNAP_RPC/block?height=$BLOCK_HEIGHT" | jq -r .result.block_id.hash)
+
+echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
+
+sed -i -E "s|^(enable[[:space:]]+=[[:space:]]+).*$|\1true| ; \
+s|^(rpc_servers[[:space:]]+=[[:space:]]+).*$|\1\"$SNAP_RPC,$SNAP_RPC\"| ; \
+s|^(trust_height[[:space:]]+=[[:space:]]+).*$|\1$BLOCK_HEIGHT| ; \
+s|^(trust_hash[[:space:]]+=[[:space:]]+).*$|\1\"$TRUST_HASH\"|" $HOME/.artelad/config/config.toml
+
+mv $HOME/.artelad/priv_validator_state.json.backup $HOME/.artelad/data/priv_validator_state.json
+sudo systemctl restart artelad && sudo journalctl -u artelad -f -o cat
+````
