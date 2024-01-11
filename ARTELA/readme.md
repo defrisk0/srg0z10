@@ -59,7 +59,7 @@ sed -i 's|^snapshot-interval *=.*|snapshot-interval = 2000|g' $HOME/.artelad/con
 ````
 Create a service file:
 ````
-sudo tee /etc/systemd/system/andromedad.service > /dev/null << EOF
+sudo tee /etc/systemd/system/artelad.service > /dev/null << EOF
 [Unit]
 Description=ARTELA NODE
 After=network-online.target
@@ -86,25 +86,4 @@ sudo systemctl restart artelad
 Checking the logs
 ````
 sudo journalctl -u artelad -f -o cat
-````
-### <a id="title1">State Sync</a>
-````
-sudo systemctl stop artelad
-cp $HOME/.artelad/data/priv_validator_state.json $HOME/.artelad/priv_validator_state.json.backup
-artelad tendermint unsafe-reset-all --home $HOME/.artelad --keep-addr-book
-SNAP_RPC=http://95.216.35.51:22357
-
-LATEST_HEIGHT=$(curl -s $SNAP_RPC/block | jq -r .result.block.header.height); \
-BLOCK_HEIGHT=$((LATEST_HEIGHT - 2000)); \
-TRUST_HASH=$(curl -s "$SNAP_RPC/block?height=$BLOCK_HEIGHT" | jq -r .result.block_id.hash)
-
-echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
-
-sed -i -E "s|^(enable[[:space:]]+=[[:space:]]+).*$|\1true| ; \
-s|^(rpc_servers[[:space:]]+=[[:space:]]+).*$|\1\"$SNAP_RPC,$SNAP_RPC\"| ; \
-s|^(trust_height[[:space:]]+=[[:space:]]+).*$|\1$BLOCK_HEIGHT| ; \
-s|^(trust_hash[[:space:]]+=[[:space:]]+).*$|\1\"$TRUST_HASH\"|" $HOME/.artelad/config/config.toml
-
-mv $HOME/.artelad/priv_validator_state.json.backup $HOME/.artelad/data/priv_validator_state.json
-sudo systemctl restart artelad && sudo journalctl -u artelad -f -o cat
 ````
