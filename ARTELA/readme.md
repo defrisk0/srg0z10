@@ -20,10 +20,10 @@ Install CLI:
 ````
 git clone https://github.com/artela-network/artela.git
 cd artela
-git checkout v0.4.7-rc4-5-gcd9dcb9
+git checkout v0.4.7-rc6
 make install
 ````
-Let's check the version (current as of January 2024 - v0.4.7-rc4-5-gcd9dcb9 commit: cd9dcb9ccd349198ba95dc0c3d8fb7c1d04549e3):
+Let's check the version (current as of January 2024 - v0.4.7-rc6 commit: c35ccbfba143fe218d2db11585d8dda9a640eaf0):
 ````
 artelad version --long
 ````
