@@ -50,6 +50,10 @@ Edit minimum-gas-prices parameter:
 ````
 sed -i 's|^minimum-gas-prices *=.*|minimum-gas-prices = "0.02uart"|g' $HOME/.artelad/config/app.toml
 ````
+Edit runtime cache size:
+````
+sed -E 's/^pool-size[[:space:]]*=[[:space:]]*[0-9]+$/apply-pool-size = 10\nquery-pool-size = 30/' $HOME/.artelad/config/app.toml > $HOME/.artelad/config/temp.app.toml && mv $HOME/.artelad/config/temp.app.toml $HOME/.artelad/config/app.toml
+````
 Edit pruning parameter:
 ````
 sed -i 's|pruning = "default"|pruning = "custom"|g' $HOME/.artelad/config/app.toml
