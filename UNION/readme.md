@@ -1,5 +1,5 @@
 # UNION
-[RPC](http://union.srgts.xyz:21657) | [API](http://union.srgts.xyz:1337) | [STATESYNC](#title1) 
+[RPC](http://union.srgts.xyz:22257) | [STATESYNC](#title1) 
 
 ### <a id="title1">State Sync</a>
 ````
@@ -10,7 +10,7 @@ sed -i -e 's|^seeds *=.*|seeds = "'$seeds'"|; s|^persistent_peers *=.*|persisten
 sudo systemctl stop uniond
 cp $HOME/.union/data/priv_validator_state.json $HOME/.union/priv_validator_state.json.backup
 uniond tendermint unsafe-reset-all --home $HOME/.union --keep-addr-book
-SNAP_RPC="http://union.srgts.xyz:21657"
+SNAP_RPC="http://union.srgts.xyz:22257"
 
 LATEST_HEIGHT=$(curl -s $SNAP_RPC/block | jq -r .result.block.header.height); \
 BLOCK_HEIGHT=$((LATEST_HEIGHT - 2000)); \
