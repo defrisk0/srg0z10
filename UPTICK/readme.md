@@ -21,10 +21,10 @@ Install CLI:
 cd $HOME
 git clone https://github.com/UptickNetwork/uptick.git
 cd uptick
-git checkout v0.2.11
+git checkout v0.2.18
 make install
 ````
-Let's check the version (current as of November 2023 - v0.2.11 commit: a67f8c973f0b4068493b5063a3f99fa8816558cf):
+Let's check the version (current as of February 2024 - v0.2.18 commit: d8618ad5c4054b28c3233f3e4eca40c739672255):
 ````
 uptickd version --long
 ````
@@ -39,7 +39,7 @@ Download the current genesis file:
 ````
 curl -s https://raw.githubusercontent.com/UptickNetwork/uptick-mainnet/master/uptick_117-1/genesis.json > $HOME/.uptickd/config/genesis.json
 ````
-Let's check sum genesis file (current as of November 2023 - df80462fed795d877fb1e372175ec66d004056fa0ec98c6c3ed52a6715efc66f):
+Let's check sum genesis file (current as of February 2024 - df80462fed795d877fb1e372175ec66d004056fa0ec98c6c3ed52a6715efc66f):
 ````
 sha256sum $HOME/.uptickd/config/genesis.json
 ````
