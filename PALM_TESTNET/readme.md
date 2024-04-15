@@ -26,12 +26,12 @@ Install Polygon-Edge:
 cd $HOME
 git clone https://github.com/gateway-fm/polygon-edge
 cd $HOME/polygon-edge
-git checkout 1.1.38
+git checkout 1.1.78
 make build
 chmod +x polygon-edge
 cp polygon-edge $HOME/go/bin/
 ````
-Let's check the version 1.1.38 (commit hash = 84522530915fa70b1c0d466aa22815b84b911982)
+Let's check the version 1.1.78 (commit hash = 86fc7920ca8ef5c9f3e1d9b5ddc92323c3128c39)
 ````
 polygon-edge version
 ````
