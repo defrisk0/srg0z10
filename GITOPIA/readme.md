@@ -1,5 +1,4 @@
 # GITOPIA
-[RPC](http://gitopia.srgts.xyz:41117) | [API](http://gitopia.srgts.xyz:4117) | [STATESYNC](#title1) 
 
 Let's update and install the necessary packages:
 ````
@@ -22,10 +21,10 @@ Install CLI:
 cd $HOME
 git clone https://github.com/gitopia/gitopia.git
 cd gitopia
-git checkout v3.3.0
+git checkout v4.0.0
 make install
 ````
-Let's check the version (current as of October 2023 - v3.3.0 commit: 0eab60ecf8c3e22e9c71d54346f76a35830a5dc5):
+Let's check the version (current as of September 2024 - v4.0.0 | commit: 20a03bd0025b91e3a48b4046f08f4f6115f35e79):
 ````
 gitopiad version --long
 ````
@@ -43,7 +42,7 @@ tar -xzf $HOME/genesis.tar.gz
 mv genesis.json $HOME/.gitopia/config/genesis.json
 rm $HOME/genesis.tar.gz
 ````
-Let's check sum genesis file (current as of October 2023 - 0cf5c55e6ea1fbcebccadba0f6dc0b83ac76d1b608487a06978956404ce33e66):
+Let's check sum genesis file (current as of September 2024 - 0cf5c55e6ea1fbcebccadba0f6dc0b83ac76d1b608487a06978956404ce33e66):
 ````
 sha256sum $HOME/.gitopia/config/genesis.json
 ````
@@ -54,7 +53,7 @@ sed -i 's|^minimum-gas-prices *=.*|minimum-gas-prices = "0.0001ulore"|g' $HOME/.
 Adding seeds and peers:
 ````
 seeds="a4a69a62de7cb0feb96c239405aa247a5a258739@seeds.cros-nest.com:57656,ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:11356"
-peers="082e95b5d5351e68dcfb24dff802f9064cfd5a4c@65.109.92.241:51056,d1135f9f8e71c606a0f7a01c445550b836d0ec79@65.109.157.219:28656,a2d725392ea4cb4d596555bb6e56a073d140037b@194.163.171.231:26656,901c393d17c1e6094cbbc83c34f167a67bb5fab1@65.108.70.119:36656,112e976f58198f8da593fe4134bddd92cd0fbf55@65.21.192.90:26656,5c20952d6ecd4ec0b674bf9dd9040eb3da1d2193@gitopia.srgts.xyz:41116"
+peers="082e95b5d5351e68dcfb24dff802f9064cfd5a4c@65.109.92.241:51056,d1135f9f8e71c606a0f7a01c445550b836d0ec79@65.109.157.219:28656,a2d725392ea4cb4d596555bb6e56a073d140037b@194.163.171.231:26656,901c393d17c1e6094cbbc83c34f167a67bb5fab1@65.108.70.119:36656,112e976f58198f8da593fe4134bddd92cd0fbf55@65.21.192.90:26656"
 sed -i -e 's|^seeds *=.*|seeds = "'$seeds'"|; s|^persistent_peers *=.*|persistent_peers = "'$peers'"|' $HOME/.gitopia/config/config.toml
 ````
 Edit pruning parameter:
@@ -93,25 +92,4 @@ sudo systemctl restart gitopiad
 Checking the logs
 ````
 sudo journalctl -u gitopiad -f -o cat
-````
-### <a id="title1">State Sync</a>
-````
-sudo systemctl stop gitopiad
-cp $HOME/.gitopia/data/priv_validator_state.json $HOME/.gitopia/priv_validator_state.json.backup
-gitopiad tendermint unsafe-reset-all --home $HOME/.gitopia --keep-addr-book
-SNAP_RPC="http://gitopia.srgts.xyz:41117"
-
-LATEST_HEIGHT=$(curl -s $SNAP_RPC/block | jq -r .result.block.header.height); \
-BLOCK_HEIGHT=$((LATEST_HEIGHT - 2000)); \
-TRUST_HASH=$(curl -s "$SNAP_RPC/block?height=$BLOCK_HEIGHT" | jq -r .result.block_id.hash)
-
-echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
-
-sed -i -E "s|^(enable[[:space:]]+=[[:space:]]+).*$|\1true| ; \
-s|^(rpc_servers[[:space:]]+=[[:space:]]+).*$|\1\"$SNAP_RPC,$SNAP_RPC\"| ; \
-s|^(trust_height[[:space:]]+=[[:space:]]+).*$|\1$BLOCK_HEIGHT| ; \
-s|^(trust_hash[[:space:]]+=[[:space:]]+).*$|\1\"$TRUST_HASH\"|" $HOME/.gitopia/config/config.toml
-
-mv $HOME/.gitopia/priv_validator_state.json.backup $HOME/.gitopia/data/priv_validator_state.json
-sudo systemctl restart gitopiad && sudo journalctl -u gitopiad -f -o cat
 ````
