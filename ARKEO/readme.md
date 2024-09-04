@@ -1,5 +1,4 @@
 # ARKEO
-[RPC](http://arkeo.srgts.xyz:27757) | [API](http://arkeo.srgts.xyz:1177) | [STATESYNC](#title1) 
 
 Let's update and install the necessary packages:
 ````
@@ -22,10 +21,10 @@ Install CLI:
 cd $HOME
 git clone https://github.com/arkeonetwork/arkeo
 cd arkeo
-git checkout ab05b124336ace257baa2cac07f7d1bfeed9ac02
-make install
+git checkout master
+TAG=testnet make install
 ````
-Let's check the version (current as of November 2023 - arkeo commit: 68c59e9057e306dd99cdf55ebf4e6b1876835dc8):
+Let's check the version (current as of September 2024 - arkeo commit: 5c547a39c5454f3487adf14fd4613fdc9a4e97a5):
 ````
 arkeod version --long
 ````
@@ -38,9 +37,9 @@ arkeod init $MNK --chain-id arkeo
 ````
 Download the current genesis file:
 ````
-curl -s http://seed.arkeo.network:26657/genesis | jq '.result.genesis' > ~/.arkeo/config/genesis.json
+curl -s http://seed.innovationtheory.com:26657/genesis | jq '.result.genesis' > $HOME/.arkeo/config/genesis.json
 ````
-Let's check sum genesis file (current as of November 2023 - 214828d2dac5eaaa4d2e70dde63bd460dcc86ab9e5dd7868dbfa8c3186b6abf9):
+Let's check sum genesis file (current as of September 2024 - d458511172d076d3e19f6b03212530efa6f7cd6a80412fe60365324d140fe0c3):
 ````
 sha256sum $HOME/.arkeo/config/genesis.json
 ````
@@ -50,15 +49,15 @@ sed -i 's|^minimum-gas-prices *=.*|minimum-gas-prices = "0.001uarkeo"|g' $HOME/.
 ````
 Adding seeds and peers:
 ````
-seeds="20e1000e88125698264454a884812746c2eb4807@seeds.lavenderfive.com:22856,df0561c0418f7ae31970a2cc5adaf0e81ea5923f@arkeo-testnet-seed.itrocket.net:18656"
-peers="374facfe63ab4c786d484c2d7d614063190590b7@88.99.213.25:38656,8c2d799bcc4fbf44ef34bbd2631db5c3f4619e41@213.239.207.175:60656,939ab74d3f49428b9c5c6150929037680051e14e@65.109.30.110:22856,b3a8a2660ca5520e385df6d4f42fac8c6fab1fd0@144.126.142.78:34656,98911188da7520af2165b3562b1b28fdc55ed5e7@65.108.91.152:26656"
+seeds="aab68f68841eb072d996cd1b45c2b9c9b612d95b@seed.innovationtheory.com:26656,85341b428cf5993fcc04a324d95d14590ae5172c@seed2.innovationtheory.com:26656"
+peers="c27c96c5b54a9f2bea776858e2cff364e410d2a8@71.218.54.128:26656,f7da702c17e45e463adf21e57b1d0d936cbc97a3@peer2.innovationtheory.com:26656,46e6d4751bbc67d3e72e13dacdfb0770227fbfc3@65.108.79.241:46656,fc5464b2ce731c5787be0fd316b6c4b6611886ea@37.252.184.241:26656,57f693ba3fed4dd82d02d4cbcc73712c6da4bd34@65.109.113.228:60756,38ab548031dea2b46889c253b762e51306d29cbb@65.109.92.148:61656"
 sed -i -e 's|^seeds *=.*|seeds = "'$seeds'"|; s|^persistent_peers *=.*|persistent_peers = "'$peers'"|' $HOME/.arkeo/config/config.toml
 ````
 Edit pruning parameter:
 ````
 sed -i 's|pruning = "default"|pruning = "custom"|g' $HOME/.arkeo/config/app.toml
 sed -i 's|pruning-keep-recent = "0"|pruning-keep-recent = "100"|g' $HOME/.arkeo/config/app.toml
-sed -i 's|pruning-interval = "0"|pruning-interval = "10"|g' $HOME/.arkeo/config/app.toml
+sed -i 's|pruning-interval = "0"|pruning-interval = "50"|g' $HOME/.arkeo/config/app.toml
 sed -i 's|^snapshot-interval *=.*|snapshot-interval = 2000|g' $HOME/.arkeo/config/app.toml
 ````
 Create a service file:
