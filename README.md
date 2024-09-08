@@ -1,11 +1,9 @@
 ## SRG0Z10
-[TELEGRAM](https://t.me/srg0z10) | [DISCORD](https://discord.com/users/srg0z10) | [EMAIL](mailto:sergpsy00@gmail.com) | [TWITTER](https://twitter.com/SergeyMSH) | [WEBSITE](https://srgts.xyz)
+[TELEGRAM](https://t.me/srg0z10) | [DISCORD](https://discord.com/users/srg0z10) | [EMAIL](mailto:sergpsy00@gmail.com) | [TWITTER](https://twitter.com/SergeyMSH)
 ## Mainnet participation
 * [FIRMACHAIN (GENESIS VALIDATOR)](https://firmachain.org/) - [EXPLORER](https://explorer.firmachain.dev/validators/firmavaloper15ynjhls568twd6treerrlqethcyuhnnek2jggd)
 * [UPTICK](https://uptick.network/) - [EXPLORER](https://uptick.explorers.guru/validator/uptickvaloper1xk0zpxmxjgt27ujw50g79c4kzxdpx2pg0df7kk)
 * [GITOPIA (GENESIS VALIDATOR)](https://gitopia.com/) - [EXPLORER](https://explorer.stavr.tech/gitopia-m/staking/gitopiavaloper1zcy7h3cqsdhlcqqc03nynnvu7r7ys243jkd4ft)
-* [BWARELABS (BLAST API - FANTON TESTNET)](https://bwarelabs.com/) - [EXPLORER](https://blastapi.io/explorer/0x5cf3967b719552a0644d7efe0bb980be38daaa18/1)
-* [BWARELABS (BLAST API - PALM TESTNET)](https://bwarelabs.com/) - [EXPLORER](https://blastapi.io/explorer/0x5cf3967b719552a0644d7efe0bb980be38daaa18/3)
 ## Testnet participation
 ### 2024
 * [ARKEO](https://andromedaprotocol.io/) - [MANUAL](https://github.com/defrisk0/srg0z10/tree/main/ARKEO) | [EXPLORER](https://testnet.arkeo.explorers.guru/validator/tarkeovaloper17t9h7glh7yc80yyga84jcnzh60vfthfrrfg6a2)
@@ -14,8 +12,10 @@
 * [CROWD CONTROL](https://crowdcontrol.network/) - [EXPLORER](https://explorer.theamsolutions.info/cardchain-test/staking/ccvaloper1y4lg7qhx2yusxvekhwj8gzh2vu006kk0xtczmu)
 * [ALIGNED LAYER](https://alignedlayer.com/) - [MANUAL](https://github.com/defrisk0/srg0z10/tree/main/ALIGNED_LAYER)
 ### PAUSE
-* [DEFUND](https://www.defund.app/) - [MANUAL](https://github.com/defrisk0/srg0z10/tree/main/DEFUND#defund) | [EXPLORER](https://defund.explorers.guru/validator/defundvaloper1vh407a635rc4d0pnh7a0ajcafdepxf5ue5k9ck)
+* [DEFUND](https://www.defund.app/) - [MANUAL](https://github.com/defrisk0/srg0z10/tree/main/DEFUND#defund)
 ### FINISHED
+* [BWARELABS (BLAST API - FANTON TESTNET)](https://bwarelabs.com/)
+* [BWARELABS (BLAST API - PALM TESTNET)](https://bwarelabs.com/)
 * [CASCADIA](https://cascadia.foundation/) - [MANUAL](https://github.com/defrisk0/srg0z10/tree/main/CASCADIA#cascadia)
 * [SEI NETWORK](https://seinetwork.io/)
 * [EMPOWER](https://empowerchain.io/) - [MANUAL](https://github.com/defrisk0/testnet_part/tree/main/EMPOWER#empower)
