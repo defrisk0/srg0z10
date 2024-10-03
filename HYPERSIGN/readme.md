@@ -1,5 +1,4 @@
 # HYPERSIGN
-[RPC](http://hypersign.srgts.xyz:26657) | [API](http://hypersign.srgts.xyz:1317) | [gRPC](http://hypersign.srgts.xyz:9090)
 
 Let's update and install the necessary packages:
 ````
@@ -21,10 +20,10 @@ Install CLI:
 ````
 git clone https://github.com/hypersign-protocol/hid-node.git
 cd hid-node
-git checkout v0.2.0
+git checkout v0.3.0
 make install
 ````
-Let's check the version (current as of December 2023 - v0.2.0 commit: 583b9fd):
+Let's check the version (current as of October 2024 - v0.3.0 commit: ed6203b):
 ````
 hid-noded version --long
 ````
@@ -38,7 +37,7 @@ Download the current genesis file:
 ````
 curl -s https://raw.githubusercontent.com/hypersign-protocol/networks/master/testnet/prajna/final_genesis.json > $HOME/.hid-node/config/genesis.json
 ````
-Let's check sum genesis file (current as of December 2023 - 40ef72dad62987429ab813dac1d5d2bd0f1b680eaedce07fdea0972beece6d81):
+Let's check sum genesis file (current as of October 2024 - 40ef72dad62987429ab813dac1d5d2bd0f1b680eaedce07fdea0972beece6d81):
 ````
 sha256sum $HOME/.hid-node/config/genesis.json
 ````
