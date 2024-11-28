@@ -21,10 +21,10 @@ Install CLI:
 cd $HOME
 git clone https://github.com/gitopia/gitopia.git
 cd gitopia
-git checkout v4.0.0
+git checkout v5.0.1
 make install
 ````
-Let's check the version (current as of September 2024 - v4.0.0 | commit: 20a03bd0025b91e3a48b4046f08f4f6115f35e79):
+Let's check the version (current as of December 2024 - v5.0.0 | commit: 867ea0969afc4a849c4156498f182df0dfb617ea):
 ````
 gitopiad version --long
 ````
@@ -42,7 +42,7 @@ tar -xzf $HOME/genesis.tar.gz
 mv genesis.json $HOME/.gitopia/config/genesis.json
 rm $HOME/genesis.tar.gz
 ````
-Let's check sum genesis file (current as of September 2024 - 0cf5c55e6ea1fbcebccadba0f6dc0b83ac76d1b608487a06978956404ce33e66):
+Let's check sum genesis file (current as of December 2024 - 0cf5c55e6ea1fbcebccadba0f6dc0b83ac76d1b608487a06978956404ce33e66):
 ````
 sha256sum $HOME/.gitopia/config/genesis.json
 ````
