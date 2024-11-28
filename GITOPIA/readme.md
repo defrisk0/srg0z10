@@ -24,7 +24,7 @@ cd gitopia
 git checkout v5.0.1
 make install
 ````
-Let's check the version (current as of December 2024 - v5.0.0 | commit: 867ea0969afc4a849c4156498f182df0dfb617ea):
+Let's check the version (current as of December 2024 - v5.0.1 | commit: 867ea0969afc4a849c4156498f182df0dfb617ea):
 ````
 gitopiad version --long
 ````
