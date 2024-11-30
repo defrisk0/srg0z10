@@ -21,10 +21,10 @@ Install CLI:
 cd $HOME
 git clone https://github.com/gitopia/gitopia.git
 cd gitopia
-git checkout v5.0.1
+git checkout v5.1.0
 make install
 ````
-Let's check the version (current as of December 2024 - v5.0.1 | commit: 867ea0969afc4a849c4156498f182df0dfb617ea):
+Let's check the version (current as of December 2024 - v5.1.0 | commit: 3b1ea32980e79ea74a1398f78a0388867e8d5fd4):
 ````
 gitopiad version --long
 ````
