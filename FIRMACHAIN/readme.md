@@ -22,10 +22,10 @@ source $HOME/.bash_profile
 cd $HOME
 git clone https://github.com/firmachain/firmachain
 cd firmachain
-git checkout v0.3.5-patch
+git checkout v0.4.0
 make install
 ````
-#### Let's check the version (current as of November 2023 - v0.3.5-patch commit: ac86456416cf590b081ddbe4ff8268e38c21adbd):
+#### Let's check the version (current as of December 2024 - v0.3.5-patch commit: e2ab40a4074a05838f94babab566fe231f4c39b3):
 ````
 firmachaind version --long
 ````
@@ -40,7 +40,7 @@ firmachaind init $MNK --chain-id colosseum-1
 ````
 wget https://raw.githubusercontent.com/FirmaChain/mainnet/main/colosseum-1/genesis.json -O ~/.firmachain/config/genesis.json
 ````
-#### Let's check sum genesis file (current as of November 2023 - d03edc3362a677f4a0c2f605c7f848f9516fd4f55432fda63625398c52419954):
+#### Let's check sum genesis file (current as of December 2024 - d03edc3362a677f4a0c2f605c7f848f9516fd4f55432fda63625398c52419954):
 ````
 sha256sum $HOME/.firmachain/config/genesis.json
 ````
@@ -95,25 +95,4 @@ sudo systemctl restart firmachaind
 #### Checking the logs
 ````
 sudo journalctl -u firmachaind -f -o cat
-````
-#### <a id="title1">State Sync</a>
-````
-sudo systemctl stop firmachaind
-cp $HOME/.firmachain/data/priv_validator_state.json $HOME/.firmachain/priv_validator_state.json.backup
-firmachaind tendermint unsafe-reset-all --home $HOME/.firmachain --keep-addr-book
-SNAP_RPC="http://firmachain.srgts.xyz:26657"
-
-LATEST_HEIGHT=$(curl -s $SNAP_RPC/block | jq -r .result.block.header.height); \
-BLOCK_HEIGHT=$((LATEST_HEIGHT - 2000)); \
-TRUST_HASH=$(curl -s "$SNAP_RPC/block?height=$BLOCK_HEIGHT" | jq -r .result.block_id.hash)
-
-echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
-
-sed -i -E "s|^(enable[[:space:]]+=[[:space:]]+).*$|\1true| ; \
-s|^(rpc_servers[[:space:]]+=[[:space:]]+).*$|\1\"$SNAP_RPC,$SNAP_RPC\"| ; \
-s|^(trust_height[[:space:]]+=[[:space:]]+).*$|\1$BLOCK_HEIGHT| ; \
-s|^(trust_hash[[:space:]]+=[[:space:]]+).*$|\1\"$TRUST_HASH\"|" $HOME/.firmachain/config/config.toml
-
-mv $HOME/.firmachain/priv_validator_state.json.backup $HOME/.firmachain/data/priv_validator_state.json
-sudo systemctl restart firmachaind && sudo journalctl -u firmachaind -f -o cat
 ````
