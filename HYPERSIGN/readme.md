@@ -23,7 +23,7 @@ cd hid-node
 git checkout v0.3.0
 make install
 ````
-Let's check the version (current as of October 2024 - v0.3.0 commit: ed6203b):
+Let's check the version (current as of October 2025 - v0.3.0 commit: ed6203b):
 ````
 hid-noded version --long
 ````
