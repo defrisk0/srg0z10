@@ -85,7 +85,3 @@ sudo systemctl daemon-reload
 sudo systemctl enable empowerd
 sudo systemctl restart empowerd
 ````
-Checking the logs
-````
-sudo journalctl -u empowerd -f -o cat
-````
